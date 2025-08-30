@@ -1,0 +1,107 @@
+:root {
+    --primary-navy: #1e3a8a;
+    --secondary-gold: #f59e0b;
+    --accent-white: #ffffff;
+    --text-gray: #374151;
+    --light-gray: #f8fafc;
+    --border-gray: #e5e7eb;
+  }
+  
+  .office-locations {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: var(--primary-navy);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .divider {
+    height: 4px;
+    width: 80px;
+    background-color: var(--secondary-gold);
+    margin: 0 auto 1.5rem;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+  
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .location-card {
+    background: var(--accent-white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-gray);
+  }
+  
+  .location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-gold);
+  }
+  
+  .location-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-gray);
+  }
+  
+  .location-icon {
+    color: var(--secondary-gold);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  
+  .location-card h3 {
+    color: var(--primary-navy);
+    font-size: 1.4rem;
+  }
+  
+  .location-details p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  
+  .location-details strong {
+    color: var(--primary-navy);
+  }
+  
+  @media (max-width: 768px) {
+    .office-locations {
+      padding: 3rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .locations-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .location-card {
+      padding: 1.5rem;
+    }
+  }

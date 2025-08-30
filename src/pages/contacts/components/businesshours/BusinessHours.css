@@ -1,0 +1,157 @@
+:root {
+    --primary-navy: #1e3a8a;
+    --secondary-gold: #f59e0b;
+    --accent-white: #ffffff;
+    --text-gray: #374151;
+    --light-gray: #f8fafc;
+    --border-gray: #e5e7eb;
+  }
+  
+  .business-hours {
+    padding: 5rem 0;
+    background-color: var(--accent-white);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .hours-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .section-title {
+    color: var(--primary-navy);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .divider {
+    height: 4px;
+    width: 80px;
+    background-color: var(--secondary-gold);
+    margin-bottom: 2rem;
+  }
+  
+  .hours-list {
+    margin-bottom: 2rem;
+  }
+  
+  .hours-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hours-icon {
+    color: var(--secondary-gold);
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .hours-detail {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hours-detail .day {
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 0.3rem;
+  }
+  
+  .hours-detail .time {
+    color: var(--text-gray);
+  }
+  
+  .notice {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fef3c7;
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--primary-navy);
+  }
+  
+  .notice-icon {
+    color: #d97706;
+    margin-right: 1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  
+  .notice p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .calendar-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+  }
+  
+  .calendar-icon {
+    font-size: 4rem;
+    color: var(--secondary-gold);
+    margin-bottom: 1.5rem;
+  }
+  
+  .booking-btn {
+    background-color: var(--secondary-gold);
+    color: var(--primary-navy);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .booking-btn:hover {
+    background-color: #e69009;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 992px) {
+    .hours-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .calendar-container {
+      order: -1;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .business-hours {
+      padding: 3rem 0;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calendar-container {
+      padding: 1.5rem;
+    }
+    
+    .calendar-icon {
+      font-size: 3rem;
+    }
+  }

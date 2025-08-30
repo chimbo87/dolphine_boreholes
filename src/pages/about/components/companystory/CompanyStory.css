@@ -1,0 +1,256 @@
+/* CompanyStory.css */
+:root {
+    --primary-navy: #1e3a8a;
+    --secondary-gold: #f59e0b;
+    --accent-white: #ffffff;
+    --text-gray: #374151;
+    --light-gray: #f8fafc;
+    --border-gray: #e5e7eb;
+  }
+.company-story {
+    background: var(--accent-white);
+  }
+  
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  
+  .section-header-left {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .section-header-left h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 16px;
+  }
+  
+  .section-header-left p {
+    font-size: 1.2rem;
+    color: var(--secondary-gold);
+    font-weight: 600;
+  }
+  
+  .story-text {
+    margin-bottom: 40px;
+  }
+  
+  .story-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    color: var(--text-gray);
+  }
+  
+  .founders-quote {
+    background: var(--light-gray);
+    padding: 40px;
+    border-radius: 16px;
+    border-left: 4px solid var(--secondary-gold);
+  }
+  
+  .founders-quote blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--primary-navy);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  
+  .founders-quote cite {
+    color: var(--text-gray);
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .story-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .story-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 60px 40px 40px;
+    color: var(--accent-white);
+  }
+  
+  .overlay-text h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--secondary-gold);
+  }
+  
+  .overlay-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* Timeline Section */
+  .timeline-section {
+    text-align: center;
+  }
+  
+  .timeline-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 60px;
+  }
+  
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: linear-gradient(to right, 
+      var(--secondary-gold) 0%, 
+      var(--secondary-gold) 100%);
+    z-index: 1;
+  }
+  
+  .timeline-item {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .timeline-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: var(--accent-white);
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-icon {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(245, 158, 11, 0.4);
+  }
+  
+  .timeline-year {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+    margin-bottom: 12px;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 12px;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .story-grid {
+      gap: 60px;
+    }
+    
+    .timeline {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 40px;
+    }
+    
+    .timeline::before {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+    
+    .section-header-left {
+      text-align: center;
+    }
+    
+    .section-header-left h2 {
+      font-size: 2rem;
+    }
+    
+    .founders-quote {
+      padding: 32px 24px;
+    }
+    
+    .founders-quote blockquote {
+      font-size: 1.1rem;
+    }
+    
+    .timeline {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .timeline-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .story-text p {
+      font-size: 1rem;
+    }
+    
+    .founders-quote {
+      padding: 24px 20px;
+    }
+    
+    .image-overlay {
+      padding: 40px 24px 24px;
+    }
+    
+    .overlay-text h3 {
+      font-size: 2rem;
+    }
+  }
