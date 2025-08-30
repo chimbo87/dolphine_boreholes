@@ -1,81 +1,231 @@
-import React from 'react';
-import './ServiceDetails.css';
-import { FaCheck, FaUtensils, FaUsers, FaClock, FaStar } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { ChevronRight, Droplets, MapPin, Wrench, Clock, Shield, Award } from 'lucide-react';
 
-const ServiceDetails = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Private Chef Experience",
-      description: "Enjoy a personalized dining experience with our expert chefs who will design and prepare a custom menu in your home or venue.",
-      features: [
-        "Custom menu planning",
-        "Grocery shopping included",
-        "Meal preparation and service",
-        "Kitchen clean-up"
+const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
+  const [activeService, setActiveService] = useState(selectedServiceId);
+
+  // Detailed service information
+  const detailedServices = {
+    drilling: {
+      title: 'Professional Borehole Drilling Services',
+      description: 'Our expert team provides comprehensive borehole drilling solutions using advanced equipment and proven techniques. We specialize in various geological conditions and ensure optimal water yield for your needs.',
+      processes: [
+        { step: '01', title: 'Site Preparation', desc: 'Clear and prepare the drilling site with proper access routes' },
+        { step: '02', title: 'Drilling Operation', desc: 'Execute drilling using appropriate techniques for soil conditions' },
+        { step: '03', title: 'Casing Installation', desc: 'Install protective casing to prevent contamination' },
+        { step: '04', title: 'Pump Installation', desc: 'Install and test water extraction systems' }
       ],
-      icon: <FaUtensils className="service-icon" />
+      benefits: [
+        'High-quality water source',
+        'Cost-effective long-term solution',
+        'Professional installation guarantee',
+        'Compliance with regulations'
+      ],
+      specs: {
+        'Depth Range': 'Up to 200 meters',
+        'Diameter Options': '4" to 8" casing',
+        'Geological Types': 'All soil and rock formations',
+        'Completion Time': '1-3 days average'
+      },
+      icon: <Droplets className="w-6 h-6" />,
+      color: 'emerald'
     },
-    {
-      id: 2,
-      title: "Event Staffing",
-      description: "Professional waitstaff and bartenders to ensure your event runs smoothly with impeccable service.",
-      features: [
-        "Uniformed professionals",
-        "Food and beverage service",
-        "Table setting and clearing",
-        "Custom staffing ratios"
+    siting: {
+      title: 'Geological Site Assessment & Water Location',
+      description: 'Our geological experts use advanced techniques to identify the optimal drilling locations, ensuring maximum water yield and cost efficiency for your borehole project.',
+      processes: [
+        { step: '01', title: 'Desktop Study', desc: 'Review geological maps and historical data analysis' },
+        { step: '02', title: 'Field Survey', desc: 'Conduct on-site geological and hydrological assessment' },
+        { step: '03', title: 'Geophysical Testing', desc: 'Use resistivity and other methods to map subsurface' },
+        { step: '04', title: 'Site Recommendation', desc: 'Provide detailed report with optimal drilling locations' }
       ],
-      icon: <FaUsers className="service-icon" />
+      benefits: [
+        'Maximize water yield potential',
+        'Reduce drilling risks and costs',
+        'Expert geological analysis',
+        'Detailed site reports'
+      ],
+      specs: {
+        'Survey Methods': 'Resistivity, geological mapping',
+        'Report Delivery': '3-5 business days',
+        'Accuracy Rate': '95% success rate',
+        'Site Area': 'Up to 5 hectares coverage'
+      },
+      icon: <MapPin className="w-6 h-6" />,
+      color: 'sky'
+    },
+    maintenance: {
+      title: 'Borehole Maintenance & Repair Services',
+      description: 'Keep your borehole system running efficiently with our comprehensive maintenance and repair services. We provide preventive care and emergency repairs to ensure continuous water supply.',
+      processes: [
+        { step: '01', title: 'System Inspection', desc: 'Comprehensive assessment of pump and borehole condition' },
+        { step: '02', title: 'Cleaning & Service', desc: 'Clean borehole and service all mechanical components' },
+        { step: '03', title: 'Component Replacement', desc: 'Replace worn parts with high-quality components' },
+        { step: '04', title: 'Performance Testing', desc: 'Test system performance and water quality' }
+      ],
+      benefits: [
+        'Extended equipment lifespan',
+        'Consistent water quality',
+        'Reduced emergency breakdowns',
+        'Cost-effective maintenance plans'
+      ],
+      specs: {
+        'Response Time': '24-48 hours',
+        'Service Frequency': 'Quarterly recommended',
+        'Warranty': '12 months on parts',
+        'Emergency Service': '24/7 availability'
+      },
+      icon: <Wrench className="w-6 h-6" />,
+      color: 'amber'
     }
-  ];
+  };
+
+  const currentService = detailedServices[activeService];
 
   return (
-    <section className="service-details">
-      <div className="container">
-        <h2 className="section-title">Our Signature Services</h2>
-        <div className="divider"></div>
-        <p className="section-subtitle">Tailored solutions for unforgettable culinary experiences</p>
-        
-        <div className="services-container">
-          {services.map(service => (
-            <div key={service.id} className="service-card">
-              <div className="service-header">
-                <div className="icon-wrapper">
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Service Selector */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-200">
+            <div className="flex flex-wrap gap-2">
+              {Object.entries(detailedServices).map(([key, service]) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveService(key)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                    activeService === key
+                      ? `bg-${service.color}-600 text-white shadow-md`
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
                   {service.icon}
-                </div>
-                <h3>{service.title}</h3>
+                  <span className="font-medium">{service.title}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Service Card */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+          {/* Header */}
+          <div className={`bg-gradient-to-r from-${currentService.color}-600 to-${currentService.color}-700 text-white p-8`}>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                {currentService.icon}
               </div>
-              <p className="service-description">{service.description}</p>
-              
-              <div className="service-features">
-                <h4>Service Includes:</h4>
-                <ul>
-                  {service.features.map((feature, index) => (
-                    <li key={index}>
-                      <FaCheck className="feature-icon" />
-                      <span>{feature}</span>
-                    </li>
+              <h2 className="text-2xl md:text-3xl font-bold">
+                {currentService.title}
+              </h2>
+            </div>
+            <p className="text-lg text-white/90 leading-relaxed">
+              {currentService.description}
+            </p>
+          </div>
+
+          {/* Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-8 p-8">
+            {/* Left Column - Process */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-6">Our Process</h3>
+              <div className="space-y-4">
+                {currentService.processes.map((process, idx) => (
+                  <div key={idx} className="flex gap-4 group">
+                    <div className={`flex-shrink-0 w-10 h-10 bg-${currentService.color}-600 text-white rounded-full flex items-center justify-center text-sm font-bold group-hover:scale-110 transition-transform duration-200`}>
+                      {process.step}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">{process.title}</h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">{process.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Benefits */}
+              <div className="mt-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Key Benefits</h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {currentService.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                      <div className={`w-2 h-2 bg-${currentService.color}-500 rounded-full mt-2 flex-shrink-0`}></div>
+                      <span className="text-gray-700 text-sm">{benefit}</span>
+                    </div>
                   ))}
-                </ul>
-              </div>
-              
-              <div className="service-meta">
-                <div className="meta-item">
-                  <FaClock className="meta-icon" />
-                  <span>Minimum 4 hours</span>
-                </div>
-                <div className="meta-item">
-                  <FaStar className="meta-icon" />
-                  <span>5-star rated</span>
                 </div>
               </div>
             </div>
-          ))}
+
+            {/* Right Column - Specifications and Trust */}
+            <div className="space-y-6">
+              {/* Specifications */}
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-6">Service Specifications</h3>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="space-y-4">
+                    {Object.entries(currentService.specs).map(([key, value], idx) => (
+                      <div key={idx} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
+                        <span className="font-medium text-gray-700">{key}</span>
+                        <span className={`text-${currentService.color}-600 font-semibold text-sm`}>{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className={`bg-gradient-to-br from-${currentService.color}-600 to-${currentService.color}-700 rounded-xl p-6 text-white`}>
+                <h3 className="text-lg font-bold mb-4">Why Choose Us</h3>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <Clock className="w-6 h-6 mx-auto mb-2 opacity-90" />
+                    <div className="text-2xl font-bold">15+</div>
+                    <div className={`text-xs text-${currentService.color}-100`}>Years Experience</div>
+                  </div>
+                  <div className="text-center">
+                    <Shield className="w-6 h-6 mx-auto mb-2 opacity-90" />
+                    <div className="text-2xl font-bold">100%</div>
+                    <div className={`text-xs text-${currentService.color}-100`}>Satisfaction</div>
+                  </div>
+                  <div className="text-center">
+                    <Award className="w-6 h-6 mx-auto mb-2 opacity-90" />
+                    <div className="text-2xl font-bold">500+</div>
+                    <div className={`text-xs text-${currentService.color}-100`}>Projects</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="space-y-3">
+                <button className={`w-full bg-${currentService.color}-600 text-white py-4 px-6 rounded-xl hover:bg-${currentService.color}-700 transition-colors font-semibold shadow-lg`}>
+                  Get Free Quote
+                </button>
+                <button className={`w-full border-2 border-${currentService.color}-600 text-${currentService.color}-600 py-4 px-6 rounded-xl hover:bg-${currentService.color}-50 transition-colors font-semibold`}>
+                  Schedule Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Info Banner */}
+          <div className="bg-gray-800 text-white p-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div>
+                <h4 className="font-bold mb-1">Need Expert Advice?</h4>
+                <p className="text-gray-300 text-sm">
+                  Our team is ready to discuss your specific requirements and provide personalized recommendations.
+                </p>
+              </div>
+              <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold whitespace-nowrap">
+                Contact Expert
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ServiceDetails;
+export default DetailedServiceCards;

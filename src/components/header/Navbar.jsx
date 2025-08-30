@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -34,7 +36,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => navigate('/')}
+          >
             <div className="text-2xl font-bold text-gray-800">
               <span className="text-emerald-600">AquaDrill</span>
               <span className="text-sky-600">Pro</span>
@@ -43,16 +48,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+            <button
+              onClick={() => navigate('/')}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            >
               Home
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+            </button>
+            <button
+              onClick={() => navigate('/about')}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            >
               About
-            </a>
-            
+            </button>
+
             {/* Services Dropdown */}
             <div className="relative">
-              <button 
+              <button
                 onClick={toggleServices}
                 className="flex items-center text-gray-700 hover:text-emerald-600 font-medium transition-colors"
               >
@@ -61,31 +72,52 @@ const Navbar = () => {
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
-                  <a href="#drilling" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600">
+                  <button
+                    onClick={() => navigate('/services')}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600"
+                  >
                     Borehole Drilling
-                  </a>
-                  <a href="#siting" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600">
+                  </button>
+                  <button
+                    onClick={() => navigate('/services')}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600"
+                  >
                     Water Siting & Surveying
-                  </a>
-                  <a href="#installation" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600">
+                  </button>
+                  <button
+                    onClick={() => navigate('/services')}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600"
+                  >
                     Pump Installation
-                  </a>
-                  <a href="#maintenance" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600">
+                  </button>
+                  <button
+                    onClick={() => navigate('/services')}
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-emerald-600"
+                  >
                     Maintenance & Repair
-                  </a>
+                  </button>
                 </div>
               )}
             </div>
 
-            <a href="#gallery" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+            <button
+              onClick={() => navigate('/gallery')}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            >
               Gallery
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
+            </button>
+            <button
+              onClick={() => navigate('/contact')}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+            >
               Contact
-            </a>
-            
+            </button>
+
             {/* CTA Button */}
-            <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+            <button
+              onClick={() => navigate('/contact')}
+              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            >
               Get Free Quote
             </button>
           </div>
@@ -102,22 +134,58 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-gray-700 hover:text-emerald-600 font-medium">
+              <button
+                onClick={() => {
+                  navigate('/');
+                  setIsOpen(false);
+                }}
+                className="text-gray-700 hover:text-emerald-600 font-medium"
+              >
                 Home
-              </a>
-              <a href="#about" className="text-gray-700 hover:text-emerald-600 font-medium">
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/about');
+                  setIsOpen(false);
+                }}
+                className="text-gray-700 hover:text-emerald-600 font-medium"
+              >
                 About
-              </a>
-              <a href="#services" className="text-gray-700 hover:text-emerald-600 font-medium">
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/services');
+                  setIsOpen(false);
+                }}
+                className="text-gray-700 hover:text-emerald-600 font-medium"
+              >
                 Services
-              </a>
-              <a href="#gallery" className="text-gray-700 hover:text-emerald-600 font-medium">
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/gallery');
+                  setIsOpen(false);
+                }}
+                className="text-gray-700 hover:text-emerald-600 font-medium"
+              >
                 Gallery
-              </a>
-              <a href="#contact" className="text-gray-700 hover:text-emerald-600 font-medium">
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/contact');
+                  setIsOpen(false);
+                }}
+                className="text-gray-700 hover:text-emerald-600 font-medium"
+              >
                 Contact
-              </a>
-              <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-medium w-full transition-colors">
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/contact');
+                  setIsOpen(false);
+                }}
+                className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-medium w-full transition-colors"
+              >
                 Get Free Quote
               </button>
             </div>

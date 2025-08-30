@@ -1,8 +1,8 @@
 import React from "react";
 import ServicesHero from "./components/serviceshero/ServicesHero";
-import ServiceCategories from "./components/servicecategories/ServiceCategories";
+import ServiceCategoriesGrid from "./components/servicecategoriesgrid/ServiceCategoriesGrid";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
-import PricingPlans from "./components/pricingplans/PricingPlans";
+import PricingInformation from "./components/pricingplans/PricingInformation";
 import BookingProcess from "./components/bookingprocess/BookingProcess";
 import ServiceBenefits from "./components/servicebenefits/ServiceBenefits";
 import FrequentlyAskedQuestions from "./components/frequentlyaskedquestions/FrequentlyAskedQuestions";
@@ -11,12 +11,12 @@ function Services() {
   return (
     <div>
     <ServicesHero/>
-    <ServiceCategories/>
+    <ServiceCategoriesGrid/>
     <ServiceDetails/>
-    <PricingPlans/>
-    <BookingProcess/>
+    <PricingInformation/>
+    {/* <BookingProcess/>
     <ServiceBenefits/>
-    <FrequentlyAskedQuestions/>
+    <FrequentlyAskedQuestions/> */}
     </div>
   );
 }
