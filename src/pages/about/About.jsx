@@ -1,17 +1,16 @@
 import React from "react";
-import AboutHero from "./components/abouthero/AboutHero";
 import CompanyStory from "./components/companystory/CompanyStory";
-import TeamShowcase from "./components/teamshowcase/TeamShowcase";
-import OurValues from "./components/ourvalues/OurValues";
+import MissionVision from "./components/teamshowcase/MissionVision";
+import TeamSection from "./components/teamsection/TeamSection";
 import LocationMap from "./components/locationmap/LocationMap";
 
 function About() {
   return (
     <div>
-      <AboutHero/>
+
       <CompanyStory/>
-      <TeamShowcase/>
-      <OurValues/>
+      <MissionVision/>
+      <TeamSection/>
       <LocationMap/>
     </div>
   );
