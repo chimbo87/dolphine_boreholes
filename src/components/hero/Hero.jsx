@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-blue-900 text-white min-h-screen flex items-center mt-12 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-blue-900 text-white min-h-screen flex items-center mt-20 overflow-hidden">
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(34,197,94,0.3)_0%,transparent_50%)]"></div>

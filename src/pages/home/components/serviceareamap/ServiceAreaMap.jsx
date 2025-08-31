@@ -6,49 +6,49 @@ const ServiceAreaMap = () => {
 
   const provinces = [
     {
-      id: 'gauteng',
-      name: 'Gauteng',
+      id: 'harare',
+      name: 'Harare',
       color: '#059669',
       responseTime: '24-48 hours',
       activeProjects: 45,
       completedProjects: 380,
-      mainCities: ['Johannesburg', 'Pretoria', 'Ekurhuleni'],
+      mainCities: ['Harare', 'Mazowe', 'Marondera'],
       coverage: '100%',
       description: 'Our primary service area with the fastest response times and largest team deployment.',
       coordinates: { x: 45, y: 65 }
     },
     {
-      id: 'mpumalanga',
-      name: 'Mpumalanga',
+      id: 'rusape',
+      name: 'Rusape',
       color: '#0284C7',
       responseTime: '48-72 hours',
       activeProjects: 28,
       completedProjects: 210,
-      mainCities: ['Nelspruit', 'Witbank', 'Middelburg'],
+      mainCities: ['Makoni', 'Nyazura', 'Wedza'],
       coverage: '85%',
       description: 'Extensive rural and agricultural drilling operations with specialized equipment.',
       coordinates: { x: 70, y: 55 }
     },
     {
-      id: 'limpopo',
-      name: 'Limpopo',
+      id: 'kadoma',
+      name: 'Kadoma',
       color: '#D97706',
       responseTime: '3-5 days',
       activeProjects: 22,
       completedProjects: 165,
-      mainCities: ['Polokwane', 'Tzaneen', 'Musina'],
+      mainCities: ['Katanga', 'Sadza', 'GlenView'],
       coverage: '75%',
       description: 'Community-focused projects with emphasis on sustainable water solutions.',
       coordinates: { x: 50, y: 25 }
     },
     {
-      id: 'northwest',
-      name: 'North West',
+      id: 'mvuma',
+      name: 'Mvuma',
       color: '#059669',
       responseTime: '3-5 days',
       activeProjects: 18,
       completedProjects: 140,
-      mainCities: ['Mafikeng', 'Rustenburg', 'Klerksdorp'],
+      mainCities: ['Betrece', 'Boka', 'Southly Pak'],
       coverage: '70%',
       description: 'Mining and agricultural sector specialization with heavy-duty equipment.',
       coordinates: { x: 25, y: 50 }
@@ -67,7 +67,7 @@ const ServiceAreaMap = () => {
             Our Service Coverage Area
           </h2>
           <p className="text-base text-gray-300 max-w-xl mx-auto">
-            We provide comprehensive borehole drilling services across four key provinces in South Africa. 
+            We provide comprehensive borehole drilling services across four key provinces in Zimbabwe. 
             Click on any region to learn more about our local capabilities.
           </p>
         </div>

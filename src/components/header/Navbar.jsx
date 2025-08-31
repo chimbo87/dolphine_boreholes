@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center space-x-1 ml-auto md:ml-0">
               <Mail size={12} />
-              <span>info@dolphineboreholes.co.zw</span>
+              <span>info@dolphine.co.zw</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">

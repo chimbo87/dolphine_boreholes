@@ -101,7 +101,7 @@ const QuickContactForm = () => {
             </p>
             <div className="bg-emerald-50 rounded-md p-3">
               <p className="text-emerald-700 text-xs font-medium">
-                📞 For urgent matters, call us directly at: <strong>+27 11 123 4567</strong>
+                📞 For urgent matters, call us directly at: <strong>+263 77 295 1768</strong>
               </p>
             </div>
           </div>
@@ -137,7 +137,7 @@ const QuickContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 text-sm">Call Us Direct</h4>
-                  <p className="text-gray-600 text-xs">+27 11 123 4567</p>
+                  <p className="text-gray-600 text-xs">+263 77 295 1768</p>
                 </div>
               </div>
               
@@ -147,7 +147,7 @@ const QuickContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 text-sm">Email Us</h4>
-                  <p className="text-gray-600 text-xs">info@boreholepro.co.za</p>
+                  <p className="text-gray-600 text-xs">info@dolphinesborehole.co.zw</p>
                 </div>
               </div>
               
@@ -157,7 +157,7 @@ const QuickContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 text-sm">Service Areas</h4>
-                  <p className="text-gray-600 text-xs">Gauteng, Mpumalanga, Limpopo & North West</p>
+                  <p className="text-gray-600 text-xs">Harare, Marondera,Rusape & Wedza</p>
                 </div>
               </div>
             </div>
@@ -165,9 +165,9 @@ const QuickContactForm = () => {
             <div className="mt-6 bg-emerald-50 rounded-md p-4">
               <h4 className="font-semibold text-emerald-800 text-sm mb-1.5">Why Choose Us?</h4>
               <ul className="text-xs text-emerald-700 space-y-1">
-                <li>✓ 25+ years of proven experience</li>
+                <li>✓ 10+ years of proven experience</li>
                 <li>✓ Advanced geological surveying technology</li>
-                <li>✓ 98% success rate in water location</li>
+                <li>✓ 95% success rate in water location</li>
                 <li>✓ Full maintenance and support services</li>
               </ul>
             </div>
@@ -179,7 +179,7 @@ const QuickContactForm = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                    Full Name *
+                    Full Name 
                   </label>
                   <input
                     type="text"
@@ -201,7 +201,7 @@ const QuickContactForm = () => {
 
                 <div>
                   <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                    Phone Number *
+                    Phone Number 
                   </label>
                   <input
                     type="tel"
@@ -211,7 +211,7 @@ const QuickContactForm = () => {
                     className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                       errors.phone ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="+27 XX XXX XXXX"
+                    placeholder="+263 XX XXX XXXX"
                   />
                   {errors.phone && (
                     <p className="text-red-500 text-xs mt-1 flex items-center">
@@ -224,7 +224,7 @@ const QuickContactForm = () => {
 
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                  Email Address *
+                  Email Address 
                 </label>
                 <input
                   type="email"
@@ -246,7 +246,7 @@ const QuickContactForm = () => {
 
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                  Project Location *
+                  Project Location 
                 </label>
                 <input
                   type="text"
@@ -269,7 +269,7 @@ const QuickContactForm = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-medium text-gray-700 mb-1.5">
-                    Service Required *
+                    Service Required 
                   </label>
                   <select
                     name="serviceType"

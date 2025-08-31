@@ -61,13 +61,13 @@ const Footer = () => {
                 <Droplets className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold">BoreholePro</h3>
+                <h3 className="text-lg font-bold">Dolphine Borehole</h3>
                 <p className="text-emerald-400 text-xs">Water Solutions Expert</p>
               </div>
             </div>
             
             <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-              South Africa's trusted partner for reliable water access. With over 25 years 
+              Zimbabwe's trusted partner for reliable water access. With over 25 years 
               of experience, we deliver sustainable borehole solutions that transform communities 
               and businesses.
             </p>
@@ -137,7 +137,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <Mail className="w-4 h-4 text-sky-400 mr-2 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 font-medium text-sm">info@boreholepro.co.za</p>
+                  <p className="text-gray-300 font-medium text-sm">info@dolphines.co.zw</p>
                   <p className="text-gray-400 text-xs">General Inquiries</p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 text-amber-400 mr-2 mt-0.5" />
                 <div>
                   <p className="text-gray-300 font-medium text-sm">123 Drilling Street</p>
-                  <p className="text-gray-300 text-sm">Johannesburg, Gauteng 2001</p>
+                  <p className="text-gray-300 text-sm">Harare, Budiriro 2001</p>
                 </div>
               </div>
               
@@ -208,7 +208,7 @@ const Footer = () => {
               <span className="text-white font-semibold text-sm">Emergency Water Services Available 24/7</span>
             </div>
             <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-1.5 px-4 rounded-md transition-colors duration-200 text-sm">
-              Call Now: +27 11 123 4567
+              Call Now: +263 77 295 1768
             </button>
           </div>
         </div>
@@ -220,7 +220,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center space-y-1.5 md:space-y-0 md:space-x-4 mb-3 md:mb-0">
               <p className="text-gray-400 text-xs">
-                © {currentYear} BoreholePro. All rights reserved.
+                © {currentYear} Dolphines. All rights reserved.
               </p>
               <div className="flex space-x-3 text-xs">
                 <a href="#privacy" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
