@@ -11,6 +11,14 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
 
+  // WhatsApp functionality
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+27677366141";
+    const message = "Hello Dolphine Boreholes, i want to enquire about your services";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       {/* Top Contact Bar */}
@@ -115,9 +123,9 @@ const Navbar = () => {
               Contact
             </button>
 
-            {/* CTA Button */}
+            {/* CTA Button - Updated with WhatsApp functionality */}
             <button
-              onClick={() => navigate('/contact')}
+              onClick={handleWhatsAppClick}
               className="bg-amber-600 hover:bg-amber-700 text-white px-5 py-1.5 rounded-md font-medium transition-colors"
             >
               Get Free Quote
@@ -181,9 +189,10 @@ const Navbar = () => {
               >
                 Contact
               </button>
+              {/* Mobile CTA Button - Updated with WhatsApp functionality */}
               <button
                 onClick={() => {
-                  navigate('/contact');
+                  handleWhatsAppClick();
                   setIsOpen(false);
                 }}
                 className="bg-amber-600 hover:bg-amber-700 text-white px-5 py-1.5 rounded-md font-medium w-full transition-colors"

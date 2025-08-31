@@ -81,7 +81,7 @@ const CompanyStory = () => {
   };
 
   return (
-    <section className="py-10 bg-white px-4 md:px-8 lg:px-16"> 
+    <section className="py-10 bg-white"> 
       <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
         
         {/* Header */}
