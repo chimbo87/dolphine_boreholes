@@ -1,38 +1,41 @@
 import React from 'react';
 import { MapPin, Calendar, Droplets, ChevronRight } from 'lucide-react';
+import project01 from '../../../../assets/images/community-project.jpg';
+import project02 from '../../../../assets/images/farm-project.jpg';
+import project03 from '../../../../assets/images/school-project.jpg'
 
 const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: "Riverside Community Water Project",
-      location: "Mpumalanga Province",
+      title: "Mazowe Community Water Project",
+      location: "Mashonaland Province",
       date: "March 2024",
       depth: "120m",
       yield: "15,000 L/hr",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop",
+      image: project01,
       description: "Successfully provided clean water access to over 500 families in rural Mpumalanga through precision drilling and pump installation.",
       highlights: ["Solar-powered pumping system", "Community training provided", "3-year maintenance contract"]
     },
     {
       id: 2,
       title: "Agricultural Irrigation Borehole",
-      location: "Limpopo Province",
-      date: "January 2024",
+      location: "Manicaland Province",
+      date: "January 2023",
       depth: "85m",
       yield: "25,000 L/hr",
-      image: "https://images.unsplash.com/photo-1574923354-4e5e5e5d1e4c?w=600&h=400&fit=crop",
+      image: project02,
       description: "High-yield borehole installation for large-scale farming operations, ensuring sustainable irrigation for 200 hectares of crops.",
       highlights: ["High-efficiency pump system", "Automated irrigation controls", "Water quality testing included"]
     },
     {
       id: 3,
       title: "School Water Supply Initiative",
-      location: "North West Province",
-      date: "February 2024",
+      location: "Harare Province",
+      date: "February 2022",
       depth: "95m",
       yield: "12,000 L/hr",
-      image: "https://images.unsplash.com/photo-1607081692251-5f0b6b4c6bea?w=600&h=400&fit=crop",
+      image: project03,
       description: "Emergency water solution for rural school serving 800 students, completed in record time during drought conditions.",
       highlights: ["Emergency response", "Student health priority", "Local job creation"]
     }

@@ -12,7 +12,7 @@ const Navbar = () => {
 
   // WhatsApp functionality
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+27677366141";
+    const phoneNumber = "+263772951768";
     const message = "Hello Dolphine Boreholes, i want to enquire about your services";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -44,16 +44,16 @@ const Navbar = () => {
           <div className="flex flex-1 justify-between md:justify-start items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone size={12} />
-              <span>+27 11 123 4567</span>
+              <span>+263 77 295 1768</span>
             </div>
             <div className="flex items-center space-x-1 ml-auto md:ml-0">
               <Mail size={12} />
-              <span>info@boreholepro.co.za</span>
+              <span>info@dolphineboreholes.co.zw</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
             <MapPin size={12} />
-            <span>Serving Gauteng & Surrounding Areas</span>
+            <span>Serving Harare & Surrounding Areas</span>
           </div>
         </div>
       </div>

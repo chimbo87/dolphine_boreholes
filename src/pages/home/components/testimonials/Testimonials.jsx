@@ -8,52 +8,52 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Mthembu",
+      name: "Tendai Moyo",
       position: "Community Leader",
       company: "Riverside Village",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b787?w=80&h=80&fit=crop&crop=face",
-      testimonial: "The team's expertise in borehole drilling transformed our entire community. After years of water shortages, we now have reliable access to clean water. Their professional approach and ongoing support have been exceptional.",
+      testimonial: "Dolphine Boreholes transformed our village! After months of water shortages, we now have clean, reliable water. Their professionalism and support are unmatched.",
       project: "Community Water Project"
     },
     {
       id: 2,
-      name: "Michael van der Merwe",
+      name: "Chipo Ncube",
       position: "Farm Manager",
       company: "Greenfields Agriculture",
       rating: 5,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
-      testimonial: "Outstanding service from start to finish. They accurately identified the best drilling location and delivered a high-yield borehole that has revolutionized our irrigation capabilities. Highly recommended for agricultural applications.",
+      testimonial: "Thanks to Dolphine Boreholes, our irrigation system is thriving. They drilled a high-yield borehole that now supports all our crops efficiently.",
       project: "Agricultural Irrigation System"
     },
     {
       id: 3,
-      name: "Dr. Nomsa Khumalo",
+      name: "Tariro Chikomo",
       position: "Principal",
       company: "Mafikeng Primary School",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
-      testimonial: "When our school faced a water crisis, this team responded immediately. They not only solved our water supply issue but also educated our students about water conservation. True professionals with a heart for community service.",
+      testimonial: "Our school faced a water crisis, and Dolphine Boreholes stepped in immediately. Students now have clean water, and they also taught us about water conservation.",
       project: "School Emergency Water Supply"
     },
     {
       id: 4,
-      name: "James Mokoena",
+      name: "Kudakwashe Dube",
       position: "Property Developer",
       company: "Urban Development Solutions",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
-      testimonial: "Exceptional geological survey and drilling services for our residential development. Their accurate water table mapping saved us significant costs and ensured reliable water supply for all 150 homes in our project.",
+      testimonial: "Dolphine Boreholes conducted precise geological surveys for our residential project. Reliable water supply for all homes saved us significant costs.",
       project: "Residential Development Water Supply"
     },
     {
       id: 5,
-      name: "Elizabeth Ndlovu",
+      name: "Ruvimbo Zulu",
       position: "Operations Manager",
       company: "Mountain View Lodge",
       rating: 5,
       image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&h=80&fit=crop&crop=face",
-      testimonial: "Professional, efficient, and reliable. Our lodge now has a sustainable water source that supports our eco-tourism operations. The team's commitment to environmental responsibility aligns perfectly with our values.",
+      testimonial: "Professional and efficient service from Dolphine Boreholes. Our lodge now has a sustainable water source supporting our eco-tourism operations.",
       project: "Eco-Tourism Water Solution"
     }
   ];
@@ -158,7 +158,6 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
           <button 
             onClick={prevSlide}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-1.5 rounded-full shadow-md transition-all duration-200 hover:scale-110"
@@ -174,7 +173,6 @@ const Testimonials = () => {
           </button>
         </div>
 
-        {/* Dots Indicator */}
         <div className="flex justify-center mt-6 space-x-1.5">
           {testimonials.map((_, index) => (
             <button
@@ -189,7 +187,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Auto-play Indicator */}
         <div className="text-center mt-4">
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -199,7 +196,6 @@ const Testimonials = () => {
           </button>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-8">
           <div className="bg-emerald-600 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-3">

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Phone, MapPin, Award, Droplets, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-emerald-900 to-blue-900 text-white min-h-screen flex items-center mt-12 overflow-hidden">
       {/* Dynamic Background Effects */}
@@ -50,7 +52,7 @@ const Hero = () => {
           {/* Interactive Stats Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-3xl mx-auto">
             <div className="group bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 backdrop-blur-sm border border-emerald-400/30 rounded-lg p-4 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20">
-              <div className="text-2xl font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors">15+</div>
+              <div className="text-2xl font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors">10+</div>
               <div className="text-xs text-gray-300 group-hover:text-white transition-colors">Years Experience</div>
             </div>
             
@@ -89,14 +91,14 @@ const Hero = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <button className="group relative bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 py-3 rounded-lg font-bold text-base transition-all transform hover:scale-105 shadow-xl hover:shadow-amber-500/40">
-              <span className="relative z-10">Get Free Assessment</span>
+              <span className="relative z-10" onClick={() => navigate('/contact')}>Get Free Assessment</span>
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity"></div>
             </button>
             
             <button className="group relative border-2 border-white/30 hover:border-white hover:bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold text-base transition-all transform hover:scale-105">
               <span className="flex items-center space-x-1">
                 <Phone className="w-4 h-4" />
-                <span>Call Now: +27 82 123 4567</span>
+                <span>Call Now: +263 77 295 1768</span>
               </span>
             </button>
           </div>

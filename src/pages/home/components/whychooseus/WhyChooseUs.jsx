@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const WhyChooseUs = () => {
+  const navigate = useNavigate();
   const benefits = [
     {
       title: "Expert Team",
@@ -114,11 +116,11 @@ const WhyChooseUs = () => {
                 Get your free consultation and detailed quote today.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 text-sm">
+                <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 text-sm" onClick={() => navigate('/contact')}>
                   Start Free Consultation
                 </button>
                 <button className="border-2 border-white hover:bg-white hover:text-emerald-700 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm">
-                  Call Now: +27 11 123 4567
+                  Call Now: +263 77 295 1768
                 </button>
               </div>
             </div>
@@ -129,7 +131,7 @@ const WhyChooseUs = () => {
                 <div className="text-emerald-100 text-xs">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-amber-300 mb-1">15+</div>
+                <div className="text-3xl font-bold text-amber-300 mb-1">10+</div>
                 <div className="text-emerald-100 text-xs">Years Experience</div>
               </div>
               <div className="text-center">
