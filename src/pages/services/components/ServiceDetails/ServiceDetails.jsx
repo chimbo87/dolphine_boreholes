@@ -27,7 +27,7 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
         'Geological Types': 'All soil and rock formations',
         'Completion Time': '1-3 days average'
       },
-      icon: <Droplets className="w-6 h-6" />,
+      icon: <Droplets className="w-5 h-5" />,
       color: 'emerald'
     },
     siting: {
@@ -51,7 +51,7 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
         'Accuracy Rate': '95% success rate',
         'Site Area': 'Up to 5 hectares coverage'
       },
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <MapPin className="w-5 h-5" />,
       color: 'sky'
     },
     maintenance: {
@@ -75,7 +75,7 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
         'Warranty': '12 months on parts',
         'Emergency Service': '24/7 availability'
       },
-      icon: <Wrench className="w-6 h-6" />,
+      icon: <Wrench className="w-5 h-5" />,
       color: 'amber'
     }
   };
@@ -83,19 +83,19 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
   const currentService = detailedServices[activeService];
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-10 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* Service Selector */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-xl p-2 shadow-sm border border-gray-200">
-            <div className="flex flex-wrap gap-2">
+        <div className="flex justify-center mb-6">
+          <div className="bg-white rounded-lg p-1 shadow-sm border border-gray-200">
+            <div className="flex flex-wrap gap-1">
               {Object.entries(detailedServices).map(([key, service]) => (
                 <button
                   key={key}
                   onClick={() => setActiveService(key)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                  className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs transition-all duration-200 ${
                     activeService === key
-                      ? `bg-${service.color}-600 text-white shadow-md`
+                      ? `bg-${service.color}-600 text-white shadow`
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 >
@@ -108,49 +108,45 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
         </div>
 
         {/* Detailed Service Card */}
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+        <div className="bg-white rounded-xl shadow overflow-hidden border border-gray-200">
           {/* Header */}
-          <div className={`bg-gradient-to-r from-${currentService.color}-600 to-${currentService.color}-700 text-white p-8`}>
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+          <div className={`bg-gradient-to-r from-${currentService.color}-600 to-${currentService.color}-700 text-white p-6`}>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
                 {currentService.icon}
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold">
-                {currentService.title}
-              </h2>
+              <h2 className="text-xl md:text-2xl font-bold">{currentService.title}</h2>
             </div>
-            <p className="text-lg text-white/90 leading-relaxed">
-              {currentService.description}
-            </p>
+            <p className="text-sm md:text-base text-white/90 leading-snug">{currentService.description}</p>
           </div>
 
           {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 p-8">
+          <div className="grid lg:grid-cols-2 gap-6 p-6">
             {/* Left Column - Process */}
-            <div className="space-y-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Our Process</h3>
-              <div className="space-y-4">
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-gray-800 mb-3">Our Process</h3>
+              <div className="space-y-3">
                 {currentService.processes.map((process, idx) => (
-                  <div key={idx} className="flex gap-4 group">
-                    <div className={`flex-shrink-0 w-10 h-10 bg-${currentService.color}-600 text-white rounded-full flex items-center justify-center text-sm font-bold group-hover:scale-110 transition-transform duration-200`}>
+                  <div key={idx} className="flex gap-3 group">
+                    <div className={`flex-shrink-0 w-8 h-8 bg-${currentService.color}-600 text-white rounded-full flex items-center justify-center text-xs font-bold group-hover:scale-105 transition-transform duration-200`}>
                       {process.step}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-1">{process.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{process.desc}</p>
+                      <h4 className="font-semibold text-gray-800 mb-1 text-sm">{process.title}</h4>
+                      <p className="text-gray-600 text-xs leading-snug">{process.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Benefits */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Key Benefits</h3>
-                <div className="grid sm:grid-cols-2 gap-3">
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">Key Benefits</h3>
+                <div className="grid sm:grid-cols-2 gap-2">
                   {currentService.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                      <div className={`w-2 h-2 bg-${currentService.color}-500 rounded-full mt-2 flex-shrink-0`}></div>
-                      <span className="text-gray-700 text-sm">{benefit}</span>
+                    <div key={idx} className="flex items-start gap-2 p-2 rounded-md hover:bg-gray-50 transition-colors text-xs">
+                      <div className={`w-2 h-2 bg-${currentService.color}-500 rounded-full mt-1 flex-shrink-0`}></div>
+                      <span className="text-gray-700">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -158,16 +154,16 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
             </div>
 
             {/* Right Column - Specifications and Trust */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Specifications */}
               <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Service Specifications</h3>
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <div className="space-y-4">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Service Specifications</h3>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <div className="space-y-2">
                     {Object.entries(currentService.specs).map(([key, value], idx) => (
-                      <div key={idx} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
+                      <div key={idx} className="flex justify-between items-center py-1 border-b border-gray-200 last:border-0 text-xs">
                         <span className="font-medium text-gray-700">{key}</span>
-                        <span className={`text-${currentService.color}-600 font-semibold text-sm`}>{value}</span>
+                        <span className={`text-${currentService.color}-600 font-semibold`}>{value}</span>
                       </div>
                     ))}
                   </div>
@@ -175,33 +171,33 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
               </div>
 
               {/* Trust Indicators */}
-              <div className={`bg-gradient-to-br from-${currentService.color}-600 to-${currentService.color}-700 rounded-xl p-6 text-white`}>
-                <h3 className="text-lg font-bold mb-4">Why Choose Us</h3>
-                <div className="grid grid-cols-3 gap-4">
+              <div className={`bg-gradient-to-br from-${currentService.color}-600 to-${currentService.color}-700 rounded-lg p-4 text-white text-xs`}>
+                <h3 className="text-sm font-bold mb-2">Why Choose Us</h3>
+                <div className="grid grid-cols-3 gap-2">
                   <div className="text-center">
-                    <Clock className="w-6 h-6 mx-auto mb-2 opacity-90" />
-                    <div className="text-2xl font-bold">15+</div>
-                    <div className={`text-xs text-${currentService.color}-100`}>Years Experience</div>
+                    <Clock className="w-5 h-5 mx-auto mb-1 opacity-90" />
+                    <div className="text-lg font-bold">15+</div>
+                    <div className={`text-[10px] text-${currentService.color}-100`}>Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <Shield className="w-6 h-6 mx-auto mb-2 opacity-90" />
-                    <div className="text-2xl font-bold">100%</div>
-                    <div className={`text-xs text-${currentService.color}-100`}>Satisfaction</div>
+                    <Shield className="w-5 h-5 mx-auto mb-1 opacity-90" />
+                    <div className="text-lg font-bold">100%</div>
+                    <div className={`text-[10px] text-${currentService.color}-100`}>Satisfaction</div>
                   </div>
                   <div className="text-center">
-                    <Award className="w-6 h-6 mx-auto mb-2 opacity-90" />
-                    <div className="text-2xl font-bold">500+</div>
-                    <div className={`text-xs text-${currentService.color}-100`}>Projects</div>
+                    <Award className="w-5 h-5 mx-auto mb-1 opacity-90" />
+                    <div className="text-lg font-bold">500+</div>
+                    <div className={`text-[10px] text-${currentService.color}-100`}>Projects</div>
                   </div>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="space-y-3">
-                <button className={`w-full bg-${currentService.color}-600 text-white py-4 px-6 rounded-xl hover:bg-${currentService.color}-700 transition-colors font-semibold shadow-lg`}>
+              <div className="space-y-2">
+                <button className={`w-full bg-${currentService.color}-600 text-white py-2 px-4 rounded-lg hover:bg-${currentService.color}-700 transition-colors font-semibold text-sm shadow`}>
                   Get Free Quote
                 </button>
-                <button className={`w-full border-2 border-${currentService.color}-600 text-${currentService.color}-600 py-4 px-6 rounded-xl hover:bg-${currentService.color}-50 transition-colors font-semibold`}>
+                <button className={`w-full border-2 border-${currentService.color}-600 text-${currentService.color}-600 py-2 px-4 rounded-lg hover:bg-${currentService.color}-50 transition-colors font-semibold text-sm`}>
                   Schedule Consultation
                 </button>
               </div>
@@ -209,15 +205,15 @@ const DetailedServiceCards = ({ selectedServiceId = 'drilling' }) => {
           </div>
 
           {/* Additional Info Banner */}
-          <div className="bg-gray-800 text-white p-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="bg-gray-800 text-white p-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
               <div>
                 <h4 className="font-bold mb-1">Need Expert Advice?</h4>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300">
                   Our team is ready to discuss your specific requirements and provide personalized recommendations.
                 </p>
               </div>
-              <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold whitespace-nowrap">
+              <button className="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700 transition-colors font-semibold whitespace-nowrap text-xs">
                 Contact Expert
               </button>
             </div>

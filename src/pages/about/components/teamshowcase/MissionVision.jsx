@@ -79,7 +79,7 @@ const MissionVision = () => {
   };
 
   return (
-    <section className="py-10 bg-gradient-to-br from-gray-50 to-emerald-50">
+    <section className="py-10 bg-gradient-to-br from-gray-50 to-emerald-50 px-4 md:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto px-4">
         
         {/* Mission Section */}
