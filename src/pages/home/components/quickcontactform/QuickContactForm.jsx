@@ -88,19 +88,19 @@ const QuickContactForm = () => {
 
   if (showSuccess) {
     return (
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-sky-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
-            <CheckCircle className="w-16 h-16 text-emerald-600 mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+      <section className="py-12 bg-gradient-to-br from-emerald-50 to-sky-50">
+        <div className="max-w-3xl mx-auto px-3">
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <CheckCircle className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-gray-800 mb-3">
               Thank You for Your Inquiry!
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 text-sm mb-4">
               We've received your request and our team will contact you within 24 hours 
               to discuss your borehole drilling needs.
             </p>
-            <div className="bg-emerald-50 rounded-lg p-4">
-              <p className="text-emerald-700 font-medium">
+            <div className="bg-emerald-50 rounded-md p-3">
+              <p className="text-emerald-700 text-xs font-medium">
                 📞 For urgent matters, call us directly at: <strong>+27 11 123 4567</strong>
               </p>
             </div>
@@ -111,60 +111,60 @@ const QuickContactForm = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-emerald-50 to-sky-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-12 bg-gradient-to-br from-emerald-50 to-sky-50">
+      <div className="max-w-5xl mx-auto px-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           
           {/* Left Column - Info */}
           <div>
-            <div className="mb-8">
-              <div className="flex items-center mb-4">
-                <Droplets className="w-8 h-8 text-emerald-600 mr-3" />
-                <h2 className="text-3xl font-bold text-gray-800">
+            <div className="mb-6">
+              <div className="flex items-center mb-3">
+                <Droplets className="w-6 h-6 text-emerald-600 mr-2" />
+                <h2 className="text-2xl font-bold text-gray-800">
                   Get Your Free Quote
                 </h2>
               </div>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-base text-gray-600 mb-4">
                 Ready to secure reliable water access? Our experts are standing by to 
                 assess your needs and provide a comprehensive drilling solution.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="flex items-center">
-                <div className="bg-emerald-600 rounded-full p-3 mr-4">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="bg-emerald-600 rounded-full p-2 mr-3">
+                  <Phone className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Call Us Direct</h4>
-                  <p className="text-gray-600">+27 11 123 4567</p>
+                  <h4 className="font-semibold text-gray-800 text-sm">Call Us Direct</h4>
+                  <p className="text-gray-600 text-xs">+27 11 123 4567</p>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="bg-sky-600 rounded-full p-3 mr-4">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="bg-sky-600 rounded-full p-2 mr-3">
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Email Us</h4>
-                  <p className="text-gray-600">info@boreholepro.co.za</p>
+                  <h4 className="font-semibold text-gray-800 text-sm">Email Us</h4>
+                  <p className="text-gray-600 text-xs">info@boreholepro.co.za</p>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="bg-amber-600 rounded-full p-3 mr-4">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="bg-amber-600 rounded-full p-2 mr-3">
+                  <MapPin className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Service Areas</h4>
-                  <p className="text-gray-600">Gauteng, Mpumalanga, Limpopo & North West</p>
+                  <h4 className="font-semibold text-gray-800 text-sm">Service Areas</h4>
+                  <p className="text-gray-600 text-xs">Gauteng, Mpumalanga, Limpopo & North West</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 bg-emerald-50 rounded-lg p-6">
-              <h4 className="font-semibold text-emerald-800 mb-2">Why Choose Us?</h4>
-              <ul className="text-sm text-emerald-700 space-y-1">
+            <div className="mt-6 bg-emerald-50 rounded-md p-4">
+              <h4 className="font-semibold text-emerald-800 text-sm mb-1.5">Why Choose Us?</h4>
+              <ul className="text-xs text-emerald-700 space-y-1">
                 <li>✓ 25+ years of proven experience</li>
                 <li>✓ Advanced geological surveying technology</li>
                 <li>✓ 98% success rate in water location</li>
@@ -174,11 +174,11 @@ const QuickContactForm = () => {
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8">
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1.5">
                     Full Name *
                   </label>
                   <input
@@ -186,7 +186,7 @@ const QuickContactForm = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                    className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Enter your full name"
@@ -200,7 +200,7 @@ const QuickContactForm = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1.5">
                     Phone Number *
                   </label>
                   <input
@@ -208,7 +208,7 @@ const QuickContactForm = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                    className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                       errors.phone ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="+27 XX XXX XXXX"
@@ -223,7 +223,7 @@ const QuickContactForm = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-xs font-medium text-gray-700 mb-1.5">
                   Email Address *
                 </label>
                 <input
@@ -231,7 +231,7 @@ const QuickContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                     errors.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="your.email@example.com"
@@ -245,7 +245,7 @@ const QuickContactForm = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-xs font-medium text-gray-700 mb-1.5">
                   Project Location *
                 </label>
                 <input
@@ -253,7 +253,7 @@ const QuickContactForm = () => {
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                     errors.location ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="City, Province or GPS coordinates"
@@ -266,16 +266,16 @@ const QuickContactForm = () => {
                 )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1.5">
                     Service Required *
                   </label>
                   <select
                     name="serviceType"
                     value={formData.serviceType}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                    className={`w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm ${
                       errors.serviceType ? 'border-red-500' : 'border-gray-300'
                     }`}
                   >
@@ -293,14 +293,14 @@ const QuickContactForm = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1.5">
                     Timeline
                   </label>
                   <select
                     name="urgency"
                     value={formData.urgency}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm"
                   >
                     <option value="">Select timeline</option>
                     {urgencyLevels.map((level) => (
@@ -311,21 +311,21 @@ const QuickContactForm = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-xs font-medium text-gray-700 mb-1.5">
                   Project Details
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm resize-none"
                   placeholder="Tell us about your water needs, property size, current water situation, or any specific requirements..."
                 />
               </div>
 
-              <div className="bg-sky-50 rounded-lg p-4">
-                <p className="text-sky-800 text-sm">
+              <div className="bg-sky-50 rounded-md p-3">
+                <p className="text-sky-800 text-xs">
                   <strong>💡 Pro Tip:</strong> Include details about your property size, current water source (if any), 
                   and intended water usage to help us provide the most accurate quote.
                 </p>
@@ -334,21 +334,22 @@ const QuickContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center ${
+                onClick={handleSubmit}
+                className={`w-full py-2.5 px-4 rounded-md font-semibold text-white transition-all duration-200 flex items-center justify-center text-sm ${
                   isSubmitting 
                     ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-emerald-600 hover:bg-emerald-700 hover:shadow-lg transform hover:-translate-y-0.5'
+                    : 'bg-emerald-600 hover:bg-emerald-700 hover:shadow-md transform hover:-translate-y-0.5'
                 }`}
               >
                 {isSubmitting ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
                     Sending Request...
                   </>
                 ) : (
                   <>
                     Get My Free Quote
-                    <Send className="w-5 h-5 ml-2" />
+                    <Send className="w-4 h-4 ml-1.5" />
                   </>
                 )}
               </button>
@@ -362,34 +363,34 @@ const QuickContactForm = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+        <div className="mt-12 text-center">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">
               Why Thousands Choose Our Drilling Services
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
               <div className="text-center">
-                <div className="bg-emerald-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-emerald-600" />
+                <div className="bg-emerald-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <CheckCircle className="w-6 h-6 text-emerald-600" />
                 </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Guaranteed Results</h4>
-                <p className="text-sm text-gray-600">98% success rate with money-back guarantee</p>
+                <h4 className="font-semibold text-gray-800 text-sm mb-1.5">Guaranteed Results</h4>
+                <p className="text-xs text-gray-600">98% success rate with money-back guarantee</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-sky-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-sky-600" />
+                <div className="bg-sky-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Phone className="w-6 h-6 text-sky-600" />
                 </div>
-                <h4 className="font-semibold text-gray-800 mb-2">24/7 Support</h4>
-                <p className="text-sm text-gray-600">Emergency response and ongoing maintenance</p>
+                <h4 className="font-semibold text-gray-800 text-sm mb-1.5">24/7 Support</h4>
+                <p className="text-xs text-gray-600">Emergency response and ongoing maintenance</p>
               </div>
               
               <div className="text-center">
-                <div className="bg-amber-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-amber-600" />
+                <div className="bg-amber-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                  <Award className="w-6 h-6 text-amber-600" />
                 </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Licensed & Insured</h4>
-                <p className="text-sm text-gray-600">Fully certified with comprehensive coverage</p>
+                <h4 className="font-semibold text-gray-800 text-sm mb-1.5">Licensed & Insured</h4>
+                <p className="text-xs text-gray-600">Fully certified with comprehensive coverage</p>
               </div>
             </div>
           </div>

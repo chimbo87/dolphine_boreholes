@@ -85,19 +85,19 @@ const Testimonials = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star 
         key={i} 
-        className={`w-5 h-5 ${i < rating ? 'text-amber-400 fill-current' : 'text-gray-300'}`} 
+        className={`w-4 h-4 ${i < rating ? 'text-amber-400 fill-current' : 'text-gray-300'}`} 
       />
     ));
   };
 
   return (
-    <section className="py-16 bg-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
+    <section className="py-12 bg-gray-800">
+      <div className="max-w-5xl mx-auto px-3">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-white mb-3">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-300 max-w-xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients 
             have to say about our borehole drilling services.
           </p>
@@ -108,17 +108,17 @@ const Testimonials = () => {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          <div className="overflow-hidden rounded-xl">
+          <div className="overflow-hidden rounded-lg">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0">
-                  <div className="bg-white rounded-xl p-8 mx-4 shadow-xl">
-                    <div className="flex items-start mb-6">
-                      <Quote className="w-8 h-8 text-emerald-600 mr-4 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700 text-lg leading-relaxed italic">
+                  <div className="bg-white rounded-lg p-6 mx-3 shadow-lg">
+                    <div className="flex items-start mb-4">
+                      <Quote className="w-6 h-6 text-emerald-600 mr-3 flex-shrink-0 mt-1" />
+                      <p className="text-gray-700 text-base leading-relaxed italic">
                         "{testimonial.testimonial}"
                       </p>
                     </div>
@@ -128,23 +128,23 @@ const Testimonials = () => {
                         <img 
                           src={testimonial.image}
                           alt={testimonial.name}
-                          className="w-12 h-12 rounded-full object-cover mr-4"
+                          className="w-10 h-10 rounded-full object-cover mr-3"
                         />
                         <div>
-                          <h4 className="font-semibold text-gray-800">
+                          <h4 className="font-semibold text-gray-800 text-sm">
                             {testimonial.name}
                           </h4>
-                          <p className="text-sm text-gray-600">
+                          <p className="text-xs text-gray-600">
                             {testimonial.position}
                           </p>
-                          <p className="text-sm text-emerald-600 font-medium">
+                          <p className="text-xs text-emerald-600 font-medium">
                             {testimonial.company}
                           </p>
                         </div>
                       </div>
                       
                       <div className="text-right">
-                        <div className="flex mb-2">
+                        <div className="flex mb-1">
                           {renderStars(testimonial.rating)}
                         </div>
                         <p className="text-xs text-gray-500">
@@ -161,26 +161,26 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-1.5 rounded-full shadow-md transition-all duration-200 hover:scale-110"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
           
           <button 
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-1.5 rounded-full shadow-md transition-all duration-200 hover:scale-110"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-6 space-x-1.5">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
                 currentIndex === index 
                   ? 'bg-emerald-600 scale-125' 
                   : 'bg-gray-400 hover:bg-gray-300'
@@ -190,25 +190,25 @@ const Testimonials = () => {
         </div>
 
         {/* Auto-play Indicator */}
-        <div className="text-center mt-6">
+        <div className="text-center mt-4">
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+            className="text-gray-400 hover:text-white text-xs transition-colors duration-200"
           >
             {isAutoPlaying ? 'Pause Auto-play' : 'Resume Auto-play'}
           </button>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-emerald-600 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="text-center mt-8">
+          <div className="bg-emerald-600 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-3">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-emerald-100 mb-6">
+            <p className="text-emerald-100 text-sm mb-4">
               Let us help you find the perfect water solution for your needs.
             </p>
-            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg">
+            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-2 px-6 rounded-md transition-colors duration-200 shadow-md text-sm">
               Get Your Free Quote
             </button>
           </div>

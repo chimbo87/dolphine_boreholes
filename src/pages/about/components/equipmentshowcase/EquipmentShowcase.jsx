@@ -216,25 +216,25 @@ const EquipmentShowcase = () => {
   const currentItem = filteredEquipment[currentEquipment];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-sky-50">
+    <section className="py-12 bg-gradient-to-br from-gray-50 to-sky-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="bg-emerald-600 rounded-full p-3 mr-4">
-              <Settings className="w-8 h-8 text-white" />
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-4">
+            <div className="bg-emerald-600 rounded-full p-2 mr-3">
+              <Settings className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-800">Modern Equipment & Technology</h1>
+            <h1 className="text-3xl font-bold text-gray-800">Modern Equipment & Technology</h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover the cutting-edge drilling equipment and advanced technology that enables us 
             to deliver precise, efficient, and environmentally responsible borehole solutions.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -242,14 +242,14 @@ const EquipmentShowcase = () => {
                 setSelectedCategory(category.id);
                 setCurrentEquipment(0);
               }}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-200 text-sm ${
                 selectedCategory === category.id
-                  ? 'bg-emerald-600 text-white shadow-lg'
+                  ? 'bg-emerald-600 text-white shadow-md'
                   : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
               }`}
             >
               {category.name}
-              <span className={`ml-2 px-2 py-1 rounded-full text-xs ${
+              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-xs ${
                 selectedCategory === category.id
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-200 text-gray-600'
@@ -262,7 +262,7 @@ const EquipmentShowcase = () => {
 
         {/* Main Equipment Display */}
         {currentItem && (
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden mb-12">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
             <div className="grid grid-cols-1 xl:grid-cols-2">
               
               {/* Image Section */}
@@ -270,18 +270,18 @@ const EquipmentShowcase = () => {
                 <img 
                   src={currentItem.image}
                   alt={currentItem.name}
-                  className="w-full h-96 xl:h-full object-cover"
+                  className="w-full h-80 xl:h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 
                 {/* Image Overlay Info */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{currentItem.name}</h3>
-                    <p className="text-gray-600 font-medium">{currentItem.type}</p>
-                    <div className="flex items-center mt-2">
-                      <Calendar className="w-4 h-4 text-emerald-600 mr-2" />
-                      <span className="text-sm text-gray-600">Latest {currentItem.year} Model</span>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-md p-3">
+                    <h3 className="text-lg font-bold text-gray-800 mb-1">{currentItem.name}</h3>
+                    <p className="text-gray-600 font-medium text-sm">{currentItem.type}</p>
+                    <div className="flex items-center mt-1">
+                      <Calendar className="w-3 h-3 text-emerald-600 mr-1" />
+                      <span className="text-xs text-gray-600">Latest {currentItem.year} Model</span>
                     </div>
                   </div>
                 </div>
@@ -289,41 +289,41 @@ const EquipmentShowcase = () => {
                 {/* Navigation Arrows */}
                 <button 
                   onClick={prevEquipment}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-2 rounded-full shadow-md transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
                 
                 <button 
                   onClick={nextEquipment}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-emerald-600 hover:bg-emerald-700 text-white p-2 rounded-full shadow-md transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Details Section */}
-              <div className="p-8">
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-2xl font-bold text-gray-800">{currentItem.name}</h2>
-                    <div className="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium">
+              <div className="p-6">
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <h2 className="text-xl font-bold text-gray-800">{currentItem.name}</h2>
+                    <div className="bg-emerald-100 text-emerald-600 px-2 py-1 rounded-full text-xs font-medium">
                       Latest Technology
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {currentItem.description}
                   </p>
 
                   {/* Key Advantages */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3">Key Advantages:</h4>
-                    <div className="space-y-2">
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Advantages:</h4>
+                    <div className="space-y-1">
                       {currentItem.advantages.map((advantage, index) => (
                         <div key={index} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-emerald-600 mr-3" />
-                          <span className="text-gray-700">{advantage}</span>
+                          <CheckCircle className="w-3 h-3 text-emerald-600 mr-2" />
+                          <span className="text-gray-700 text-sm">{advantage}</span>
                         </div>
                       ))}
                     </div>
@@ -331,31 +331,31 @@ const EquipmentShowcase = () => {
                 </div>
 
                 {/* Technical Specifications */}
-                <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
-                    <Gauge className="w-5 h-5 text-sky-600 mr-2" />
+                <div className="bg-gray-50 rounded-md p-4 mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-3 flex items-center text-sm">
+                    <Gauge className="w-4 h-4 text-sky-600 mr-2" />
                     Technical Specifications
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {Object.entries(currentItem.specs).map(([key, value]) => (
-                      <div key={key} className="flex justify-between items-center p-3 bg-white rounded border">
-                        <span className="text-sm font-medium text-gray-600">{key}</span>
-                        <span className="text-sm font-bold text-gray-800">{value}</span>
+                      <div key={key} className="flex justify-between items-center p-2 bg-white rounded border text-xs">
+                        <span className="font-medium text-gray-600">{key}</span>
+                        <span className="font-bold text-gray-800">{value}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Features List */}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-4 flex items-center">
-                    <Cpu className="w-5 h-5 text-amber-600 mr-2" />
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-3 flex items-center text-sm">
+                    <Cpu className="w-4 h-4 text-amber-600 mr-2" />
                     Advanced Features
                   </h4>
-                  <div className="grid grid-cols-1 gap-2">
+                  <div className="grid grid-cols-1 gap-1">
                     {currentItem.features.map((feature, index) => (
-                      <div key={index} className="flex items-center p-3 bg-amber-50 rounded-lg border border-amber-100">
-                        <Zap className="w-4 h-4 text-amber-600 mr-3" />
+                      <div key={index} className="flex items-center p-2 bg-amber-50 rounded-md border border-amber-100 text-xs">
+                        <Zap className="w-3 h-3 text-amber-600 mr-2" />
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -363,13 +363,13 @@ const EquipmentShowcase = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
-                    <Eye className="w-4 h-4 mr-2" />
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center text-sm">
+                    <Eye className="w-3 h-3 mr-1" />
                     Schedule Demo
                   </button>
-                  <button className="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
+                  <button className="flex-1 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center text-sm">
+                    <Play className="w-3 h-3 mr-1" />
                     Watch in Action
                   </button>
                 </div>
@@ -379,33 +379,33 @@ const EquipmentShowcase = () => {
         )}
 
         {/* Equipment Grid Overview */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+        <div className="mb-12">
+          <h2 className="text-xl font-bold text-gray-800 text-center mb-6">
             Complete Equipment Fleet
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredEquipment.map((item, index) => (
               <div 
                 key={item.id}
                 onClick={() => setCurrentEquipment(index)}
-                className={`cursor-pointer rounded-xl overflow-hidden shadow-lg transition-all duration-300 transform hover:scale-105 ${
-                  currentEquipment === index ? 'ring-4 ring-emerald-500 ring-opacity-50' : ''
+                className={`cursor-pointer rounded-lg overflow-hidden shadow-md transition-all duration-300 transform hover:scale-105 ${
+                  currentEquipment === index ? 'ring-2 ring-emerald-500 ring-opacity-50' : ''
                 }`}
               >
                 <div className="relative">
                   <img 
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-40 object-cover"
                   />
-                  <div className="absolute top-3 right-3 bg-emerald-600 text-white px-2 py-1 rounded text-xs font-semibold">
+                  <div className="absolute top-2 right-2 bg-emerald-600 text-white px-1.5 py-0.5 rounded text-xs font-semibold">
                     {item.year}
                   </div>
                 </div>
                 
-                <div className="p-4 bg-white">
-                  <h3 className="font-bold text-gray-800 mb-1">{item.name}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{item.type}</p>
+                <div className="p-3 bg-white">
+                  <h3 className="font-bold text-gray-800 mb-1 text-sm">{item.name}</h3>
+                  <p className="text-xs text-gray-600 mb-2">{item.type}</p>
                   
                   <div className="flex justify-between text-xs text-gray-500">
                     <span>{Object.keys(item.specs).length} Specs</span>
@@ -418,76 +418,76 @@ const EquipmentShowcase = () => {
         </div>
 
         {/* Technology Highlights */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-10">
+          <h2 className="text-xl font-bold text-gray-800 text-center mb-6">
             Technology That Sets Us Apart
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-emerald-50 rounded-xl">
-              <Target className="w-10 h-10 text-emerald-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-800 mb-2">GPS Precision</h3>
-              <p className="text-sm text-gray-600">Centimeter-accurate positioning for optimal borehole placement</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="text-center p-4 bg-emerald-50 rounded-lg">
+              <Target className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+              <h3 className="font-bold text-gray-800 mb-1 text-sm">GPS Precision</h3>
+              <p className="text-xs text-gray-600">Centimeter-accurate positioning for optimal borehole placement</p>
             </div>
             
-            <div className="text-center p-6 bg-sky-50 rounded-xl">
-              <Cpu className="w-10 h-10 text-sky-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-800 mb-2">AI Analysis</h3>
-              <p className="text-sm text-gray-600">Machine learning algorithms for geological pattern recognition</p>
+            <div className="text-center p-4 bg-sky-50 rounded-lg">
+              <Cpu className="w-8 h-8 text-sky-600 mx-auto mb-3" />
+              <h3 className="font-bold text-gray-800 mb-1 text-sm">AI Analysis</h3>
+              <p className="text-xs text-gray-600">Machine learning algorithms for geological pattern recognition</p>
             </div>
             
-            <div className="text-center p-6 bg-amber-50 rounded-xl">
-              <Shield className="w-10 h-10 text-amber-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-800 mb-2">Safety Systems</h3>
-              <p className="text-sm text-gray-600">Advanced safety protocols and automated emergency stops</p>
+            <div className="text-center p-4 bg-amber-50 rounded-lg">
+              <Shield className="w-8 h-8 text-amber-600 mx-auto mb-3" />
+              <h3 className="font-bold text-gray-800 mb-1 text-sm">Safety Systems</h3>
+              <p className="text-xs text-gray-600">Advanced safety protocols and automated emergency stops</p>
             </div>
             
-            <div className="text-center p-6 bg-emerald-50 rounded-xl">
-              <MapPin className="w-10 h-10 text-emerald-600 mx-auto mb-4" />
-              <h3 className="font-bold text-gray-800 mb-2">Remote Monitoring</h3>
-              <p className="text-sm text-gray-600">Real-time equipment tracking and performance monitoring</p>
+            <div className="text-center p-4 bg-emerald-50 rounded-lg">
+              <MapPin className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+              <h3 className="font-bold text-gray-800 mb-1 text-sm">Remote Monitoring</h3>
+              <p className="text-xs text-gray-600">Real-time equipment tracking and performance monitoring</p>
             </div>
           </div>
         </div>
 
         {/* Fleet Statistics */}
-        <div className="bg-gray-800 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-8">
+        <div className="bg-gray-800 rounded-xl p-6 text-center">
+          <h2 className="text-xl font-bold text-white mb-6">
             Our Equipment Fleet
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div>
-              <Truck className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">15</div>
-              <div className="text-gray-300 text-sm">Mobile Drilling Rigs</div>
+              <Truck className="w-6 h-6 text-emerald-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white mb-1">15</div>
+              <div className="text-gray-300 text-xs">Mobile Drilling Rigs</div>
             </div>
             <div>
-              <Settings className="w-8 h-8 text-sky-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Specialized Tools</div>
+              <Settings className="w-6 h-6 text-sky-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white mb-1">50+</div>
+              <div className="text-gray-300 text-xs">Specialized Tools</div>
             </div>
             <div>
-              <Award className="w-8 h-8 text-amber-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">99%</div>
-              <div className="text-gray-300 text-sm">Equipment Uptime</div>
+              <Award className="w-6 h-6 text-amber-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white mb-1">99%</div>
+              <div className="text-gray-300 text-xs">Equipment Uptime</div>
             </div>
             <div>
-              <Clock className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">Maintenance Support</div>
+              <Clock className="w-6 h-6 text-emerald-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white mb-1">24/7</div>
+              <div className="text-gray-300 text-xs">Maintenance Support</div>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-6">
-            <p className="text-gray-300 mb-6">
+          <div className="border-t border-gray-700 pt-4">
+            <p className="text-gray-300 mb-4 text-sm">
               Ready to see our equipment in action? Schedule a site visit or equipment demonstration.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 text-sm">
                 Schedule Equipment Demo
               </button>
-              <button className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+              <button className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 text-sm">
                 Request Technical Specs
               </button>
             </div>

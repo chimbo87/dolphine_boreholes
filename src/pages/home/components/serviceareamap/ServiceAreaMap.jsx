@@ -60,30 +60,30 @@ const ServiceAreaMap = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
+    <section className="py-12 bg-gray-800">
+      <div className="max-w-6xl mx-auto px-3">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-white mb-3">
             Our Service Coverage Area
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base text-gray-300 max-w-xl mx-auto">
             We provide comprehensive borehole drilling services across four key provinces in South Africa. 
             Click on any region to learn more about our local capabilities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           
           {/* Map Section */}
           <div className="xl:col-span-2">
-            <div className="bg-white rounded-xl p-8 shadow-xl">
-              <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">
                 Interactive Service Map
               </h3>
               
               {/* SVG Map */}
-              <div className="relative bg-gray-100 rounded-lg p-4 mb-6">
-                <svg viewBox="0 0 100 100" className="w-full h-80">
+              <div className="relative bg-gray-100 rounded-md p-3 mb-4">
+                <svg viewBox="0 0 100 100" className="w-full h-64">
                   {/* Background */}
                   <rect width="100" height="100" fill="#f3f4f6" />
                   
@@ -93,16 +93,16 @@ const ServiceAreaMap = () => {
                       <circle
                         cx={province.coordinates.x}
                         cy={province.coordinates.y}
-                        r="12"
+                        r="10"
                         fill={selectedProvince?.id === province.id ? province.color : `${province.color}80`}
                         stroke={province.color}
                         strokeWidth="2"
-                        className="cursor-pointer transition-all duration-300 hover:r-14"
+                        className="cursor-pointer transition-all duration-300 hover:r-12"
                         onClick={() => handleProvinceClick(province)}
                       />
                       <text
                         x={province.coordinates.x}
-                        y={province.coordinates.y + 20}
+                        y={province.coordinates.y + 18}
                         textAnchor="middle"
                         className="text-xs font-semibold fill-gray-700 cursor-pointer"
                         onClick={() => handleProvinceClick(province)}
@@ -113,10 +113,10 @@ const ServiceAreaMap = () => {
                         <circle
                           cx={province.coordinates.x}
                           cy={province.coordinates.y}
-                          r="15"
+                          r="13"
                           fill="none"
                           stroke={province.color}
-                          strokeWidth="3"
+                          strokeWidth="2"
                           className="animate-pulse"
                         />
                       )}
@@ -126,23 +126,23 @@ const ServiceAreaMap = () => {
               </div>
 
               {/* Legend */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {provinces.map((province) => (
                   <div 
                     key={province.id}
                     onClick={() => handleProvinceClick(province)}
-                    className={`p-3 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
+                    className={`p-2 rounded-md border-2 cursor-pointer transition-all duration-200 ${
                       selectedProvince?.id === province.id 
                         ? 'border-gray-800 bg-gray-50' 
                         : 'border-gray-200 hover:border-gray-400'
                     }`}
                   >
-                    <div className="flex items-center mb-2">
+                    <div className="flex items-center mb-1">
                       <div 
-                        className="w-4 h-4 rounded-full mr-2"
+                        className="w-3 h-3 rounded-full mr-1.5"
                         style={{ backgroundColor: province.color }}
                       ></div>
-                      <span className="font-semibold text-sm text-gray-800">{province.name}</span>
+                      <span className="font-semibold text-xs text-gray-800">{province.name}</span>
                     </div>
                     <p className="text-xs text-gray-600">{province.coverage} Coverage</p>
                   </div>
@@ -153,64 +153,64 @@ const ServiceAreaMap = () => {
 
           {/* Province Details Panel */}
           <div className="xl:col-span-1">
-            <div className="bg-white rounded-xl shadow-xl p-6 h-full">
+            <div className="bg-white rounded-lg shadow-lg p-5 h-full">
               {selectedProvince ? (
                 <div>
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-3">
                     <div 
-                      className="w-6 h-6 rounded-full mr-3"
+                      className="w-5 h-5 rounded-full mr-2"
                       style={{ backgroundColor: selectedProvince.color }}
                     ></div>
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="text-lg font-bold text-gray-800">
                       {selectedProvince.name}
                     </h3>
                   </div>
 
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-4 text-xs leading-relaxed">
                     {selectedProvince.description}
                   </p>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-2 bg-gray-50 rounded-md">
                       <div className="flex items-center">
-                        <Clock className="w-5 h-5 text-emerald-600 mr-2" />
-                        <span className="text-sm font-medium">Response Time</span>
+                        <Clock className="w-4 h-4 text-emerald-600 mr-1.5" />
+                        <span className="text-xs font-medium">Response Time</span>
                       </div>
-                      <span className="text-sm font-bold text-gray-800">
+                      <span className="text-xs font-bold text-gray-800">
                         {selectedProvince.responseTime}
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div className="flex items-center justify-between p-2 bg-gray-50 rounded-md">
                       <div className="flex items-center">
-                        <Truck className="w-5 h-5 text-sky-600 mr-2" />
-                        <span className="text-sm font-medium">Active Projects</span>
+                        <Truck className="w-4 h-4 text-sky-600 mr-1.5" />
+                        <span className="text-xs font-medium">Active Projects</span>
                       </div>
-                      <span className="text-sm font-bold text-gray-800">
+                      <span className="text-xs font-bold text-gray-800">
                         {selectedProvince.activeProjects}
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div className="flex items-center justify-between p-2 bg-gray-50 rounded-md">
                       <div className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-amber-600 mr-2" />
-                        <span className="text-sm font-medium">Completed</span>
+                        <CheckCircle className="w-4 h-4 text-amber-600 mr-1.5" />
+                        <span className="text-xs font-medium">Completed</span>
                       </div>
-                      <span className="text-sm font-bold text-gray-800">
+                      <span className="text-xs font-bold text-gray-800">
                         {selectedProvince.completedProjects}
                       </span>
                     </div>
 
-                    <div className="p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center mb-2">
-                        <MapPin className="w-5 h-5 text-emerald-600 mr-2" />
-                        <span className="text-sm font-medium">Main Service Cities</span>
+                    <div className="p-2 bg-gray-50 rounded-md">
+                      <div className="flex items-center mb-1.5">
+                        <MapPin className="w-4 h-4 text-emerald-600 mr-1.5" />
+                        <span className="text-xs font-medium">Main Service Cities</span>
                       </div>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5">
                         {selectedProvince.mainCities.map((city) => (
                           <span 
                             key={city}
-                            className="bg-white px-3 py-1 rounded-full text-xs font-medium text-gray-700"
+                            className="bg-white px-2 py-0.5 rounded-full text-xs font-medium text-gray-700"
                           >
                             {city}
                           </span>
@@ -219,31 +219,31 @@ const ServiceAreaMap = () => {
                     </div>
                   </div>
 
-                  <button className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center">
-                    <Phone className="w-4 h-4 mr-2" />
+                  <button className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-3 rounded-md transition-colors duration-200 flex items-center justify-center text-sm">
+                    <Phone className="w-3.5 h-3.5 mr-1.5" />
                     Contact {selectedProvince.name} Team
                   </button>
                 </div>
               ) : (
-                <div className="text-center py-8">
-                  <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-600 mb-2">
+                <div className="text-center py-6">
+                  <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-3" />
+                  <h3 className="text-base font-semibold text-gray-600 mb-1.5">
                     Select a Province
                   </h3>
-                  <p className="text-sm text-gray-500 mb-6">
+                  <p className="text-xs text-gray-500 mb-4">
                     Click on any province in the map or legend to view detailed service information 
                     for that region.
                   </p>
                   
-                  <div className="bg-emerald-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-emerald-800 mb-2">Quick Stats</h4>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="bg-emerald-50 rounded-md p-3">
+                    <h4 className="font-semibold text-emerald-800 text-xs mb-1.5">Quick Stats</h4>
+                    <div className="grid grid-cols-2 gap-3 text-xs">
                       <div>
-                        <div className="text-2xl font-bold text-emerald-600">113</div>
+                        <div className="text-xl font-bold text-emerald-600">113</div>
                         <div className="text-emerald-700">Active Projects</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-emerald-600">895</div>
+                        <div className="text-xl font-bold text-emerald-600">895</div>
                         <div className="text-emerald-700">Total Completed</div>
                       </div>
                     </div>
@@ -255,35 +255,35 @@ const ServiceAreaMap = () => {
         </div>
 
         {/* Service Coverage Summary */}
-        <div className="mt-12 bg-emerald-600 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="mt-8 bg-emerald-600 rounded-lg p-6 text-center">
+          <h3 className="text-xl font-bold text-white mb-3">
             Comprehensive Coverage Across All Service Areas
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
             <div className="text-center">
-              <Users className="w-8 h-8 text-emerald-200 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">50+</div>
-              <div className="text-emerald-200 text-sm">Expert Technicians</div>
+              <Users className="w-6 h-6 text-emerald-200 mx-auto mb-1.5" />
+              <div className="text-2xl font-bold text-white">50+</div>
+              <div className="text-emerald-200 text-xs">Expert Technicians</div>
             </div>
             <div className="text-center">
-              <Truck className="w-8 h-8 text-emerald-200 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">15</div>
-              <div className="text-emerald-200 text-sm">Mobile Drilling Rigs</div>
+              <Truck className="w-6 h-6 text-emerald-200 mx-auto mb-1.5" />
+              <div className="text-2xl font-bold text-white">15</div>
+              <div className="text-emerald-200 text-xs">Mobile Drilling Rigs</div>
             </div>
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-emerald-200 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">4</div>
-              <div className="text-emerald-200 text-sm">Provinces Covered</div>
+              <MapPin className="w-6 h-6 text-emerald-200 mx-auto mb-1.5" />
+              <div className="text-2xl font-bold text-white">4</div>
+              <div className="text-emerald-200 text-xs">Provinces Covered</div>
             </div>
             <div className="text-center">
-              <Clock className="w-8 h-8 text-emerald-200 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-emerald-200 text-sm">Emergency Response</div>
+              <Clock className="w-6 h-6 text-emerald-200 mx-auto mb-1.5" />
+              <div className="text-2xl font-bold text-white">24/7</div>
+              <div className="text-emerald-200 text-xs">Emergency Response</div>
             </div>
           </div>
           
-          <div className="mt-8">
-            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg">
+          <div className="mt-6">
+            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-2 px-6 rounded-md transition-colors duration-200 shadow-md text-sm">
               Request Service in Your Area
             </button>
           </div>

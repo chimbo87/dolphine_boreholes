@@ -41,36 +41,36 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-12 bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-50 via-transparent to-sky-50"></div>
-        <div className="absolute top-1/4 right-0 w-64 h-64 bg-emerald-100 rounded-full opacity-20 transform translate-x-32"></div>
-        <div className="absolute bottom-1/4 left-0 w-48 h-48 bg-sky-100 rounded-full opacity-20 transform -translate-x-24"></div>
+        <div className="absolute top-1/4 right-0 w-48 h-48 bg-emerald-100 rounded-full opacity-20 transform translate-x-24"></div>
+        <div className="absolute bottom-1/4 left-0 w-36 h-36 bg-sky-100 rounded-full opacity-20 transform -translate-x-18"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4">
+      <div className="relative max-w-6xl mx-auto px-3">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-sky-100 text-sky-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-10">
+          <div className="inline-block bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-semibold mb-3">
             WHY CHOOSE US
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
             Your Trusted Water
             <span className="block text-emerald-600">Solution Partners</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We combine decades of experience with cutting-edge technology to deliver 
             reliable water solutions that stand the test of time.
           </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden"
+              className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 overflow-hidden"
             >
               {/* Hover Background Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-sky-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
@@ -78,20 +78,20 @@ const WhyChooseUs = () => {
               {/* Content */}
               <div className="relative">
                 {/* Icon & Stat */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
-                  <div className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">
+                  <div className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-xs font-bold">
                     {benefit.stat}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors">
                   {benefit.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {benefit.description}
                 </p>
 
@@ -103,42 +103,42 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Bottom Stats Section */}
-        <div className="bg-gradient-to-r from-emerald-600 to-sky-600 rounded-3xl p-8 lg:p-12 text-white">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-gradient-to-r from-emerald-600 to-sky-600 rounded-2xl p-6 lg:p-8 text-white">
+          <div className="grid lg:grid-cols-2 gap-6 items-center">
             <div>
-              <h3 className="text-3xl font-bold mb-4">
+              <h3 className="text-2xl font-bold mb-3">
                 Ready to Start Your Water Project?
               </h3>
-              <p className="text-emerald-100 text-lg mb-6">
+              <p className="text-emerald-100 text-base mb-4">
                 Join hundreds of satisfied customers who trust us for their water needs. 
                 Get your free consultation and detailed quote today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-semibold transition-all transform hover:scale-105 text-sm">
                   Start Free Consultation
                 </button>
-                <button className="border-2 border-white hover:bg-white hover:text-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                <button className="border-2 border-white hover:bg-white hover:text-emerald-700 text-white px-4 py-2 rounded-lg font-semibold transition-all text-sm">
                   Call Now: +27 11 123 4567
                 </button>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-300 mb-2">500+</div>
-                <div className="text-emerald-100">Projects Completed</div>
+                <div className="text-3xl font-bold text-amber-300 mb-1">500+</div>
+                <div className="text-emerald-100 text-xs">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-300 mb-2">15+</div>
-                <div className="text-emerald-100">Years Experience</div>
+                <div className="text-3xl font-bold text-amber-300 mb-1">15+</div>
+                <div className="text-emerald-100 text-xs">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-300 mb-2">95%</div>
-                <div className="text-emerald-100">Success Rate</div>
+                <div className="text-3xl font-bold text-amber-300 mb-1">95%</div>
+                <div className="text-emerald-100 text-xs">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-300 mb-2">24/7</div>
-                <div className="text-emerald-100">Emergency Support</div>
+                <div className="text-3xl font-bold text-amber-300 mb-1">24/7</div>
+                <div className="text-emerald-100 text-xs">Emergency Support</div>
               </div>
             </div>
           </div>

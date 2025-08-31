@@ -156,15 +156,15 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-gray-800 mb-3">
             Meet Our Expert Team
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our success comes from the dedication and expertise of our talented professionals. 
             Each team member brings years of specialized experience in water resource management 
             and borehole drilling technology.
@@ -172,21 +172,21 @@ const TeamSection = () => {
         </div>
 
         {/* Department Overview */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
+        <div className="mb-12">
+          <h2 className="text-xl font-bold text-gray-800 text-center mb-6">
             Our Departments
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {departments.map((dept, index) => {
               const IconComponent = dept.icon;
               const colors = getColorClasses(dept.color);
               
               return (
-                <div key={index} className="text-center p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow duration-200">
-                  <div className={`${colors.bg} rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3`}>
-                    <IconComponent className={`w-6 h-6 ${colors.icon}`} />
+                <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:shadow-md transition-shadow duration-200">
+                  <div className={`${colors.bg} rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2`}>
+                    <IconComponent className={`w-5 h-5 ${colors.icon}`} />
                   </div>
-                  <h3 className="font-semibold text-gray-800 text-sm mb-1">{dept.name}</h3>
+                  <h3 className="font-semibold text-gray-800 text-xs mb-1">{dept.name}</h3>
                   <p className="text-gray-600 text-xs">{dept.count} Expert{dept.count > 1 ? 's' : ''}</p>
                 </div>
               );
@@ -195,7 +195,7 @@ const TeamSection = () => {
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {teamMembers.map((member) => {
             const isExpanded = expandedMember === member.id;
             const colors = getColorClasses(member.department === 'Executive Leadership' || member.department === 'Customer Service' ? 'emerald' : 
@@ -204,42 +204,42 @@ const TeamSection = () => {
             return (
               <div 
                 key={member.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
               >
                 {/* Profile Header */}
                 <div className="relative">
                   <img 
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-56 object-cover"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                    <p className="text-emerald-300 font-medium">{member.position}</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <h3 className="text-lg font-bold text-white">{member.name}</h3>
+                    <p className="text-emerald-300 font-medium text-sm">{member.position}</p>
                   </div>
                 </div>
 
                 {/* Basic Info */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`${colors.bg} px-3 py-1 rounded-full`}>
-                      <span className={`text-sm font-medium ${colors.icon}`}>
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className={`${colors.bg} px-2 py-1 rounded-full`}>
+                      <span className={`text-xs font-medium ${colors.icon}`}>
                         {member.department}
                       </span>
                     </div>
                     <div className="flex items-center text-gray-600">
-                      <Briefcase className="w-4 h-4 mr-1" />
-                      <span className="text-sm">{member.experience}</span>
+                      <Briefcase className="w-3 h-3 mr-1" />
+                      <span className="text-xs">{member.experience}</span>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-xs leading-relaxed mb-3">
                     {member.bio}
                   </p>
 
-                  <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="grid grid-cols-3 gap-1 mb-3">
                     {member.expertise.slice(0, 3).map((skill, index) => (
-                      <div key={index} className="bg-gray-50 rounded px-2 py-1 text-center">
+                      <div key={index} className="bg-gray-50 rounded px-1 py-1 text-center">
                         <span className="text-xs text-gray-700 font-medium">{skill}</span>
                       </div>
                     ))}
@@ -248,35 +248,35 @@ const TeamSection = () => {
                   {/* Expand/Collapse Button */}
                   <button
                     onClick={() => toggleMemberDetails(member.id)}
-                    className={`w-full ${colors.accent} hover:opacity-90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center`}
+                    className={`w-full ${colors.accent} hover:opacity-90 text-white font-medium py-1.5 px-3 rounded-md transition-all duration-200 flex items-center justify-center text-sm`}
                   >
                     {isExpanded ? 'Show Less' : 'View Full Profile'}
                     {isExpanded ? 
-                      <ChevronUp className="w-4 h-4 ml-2" /> : 
-                      <ChevronDown className="w-4 h-4 ml-2" />
+                      <ChevronUp className="w-3 h-3 ml-1" /> : 
+                      <ChevronDown className="w-3 h-3 ml-1" />
                     }
                   </button>
 
                   {/* Expanded Details */}
                   {isExpanded && (
-                    <div className="mt-4 space-y-4 border-t pt-4">
+                    <div className="mt-3 space-y-3 border-t pt-3">
                       <div>
-                        <div className="flex items-center mb-2">
-                          <GraduationCap className="w-4 h-4 text-gray-600 mr-2" />
-                          <span className="font-semibold text-gray-800 text-sm">Education</span>
+                        <div className="flex items-center mb-1">
+                          <GraduationCap className="w-3 h-3 text-gray-600 mr-2" />
+                          <span className="font-semibold text-gray-800 text-xs">Education</span>
                         </div>
-                        <p className="text-gray-600 text-sm pl-6">{member.education}</p>
+                        <p className="text-gray-600 text-xs pl-5">{member.education}</p>
                       </div>
 
                       <div>
-                        <div className="flex items-center mb-2">
-                          <Award className="w-4 h-4 text-gray-600 mr-2" />
-                          <span className="font-semibold text-gray-800 text-sm">Certifications</span>
+                        <div className="flex items-center mb-1">
+                          <Award className="w-3 h-3 text-gray-600 mr-2" />
+                          <span className="font-semibold text-gray-800 text-xs">Certifications</span>
                         </div>
-                        <div className="pl-6 space-y-1">
+                        <div className="pl-5 space-y-1">
                           {member.certifications.map((cert, index) => (
-                            <div key={index} className="text-gray-600 text-sm flex items-center">
-                              <div className="w-1 h-1 bg-emerald-600 rounded-full mr-2"></div>
+                            <div key={index} className="text-gray-600 text-xs flex items-center">
+                              <div className="w-1 h-1 bg-emerald-600 rounded-full mr-1"></div>
                               {cert}
                             </div>
                           ))}
@@ -284,34 +284,34 @@ const TeamSection = () => {
                       </div>
 
                       <div>
-                        <div className="flex items-center mb-2">
-                          <Target className="w-4 h-4 text-gray-600 mr-2" />
-                          <span className="font-semibold text-gray-800 text-sm">Key Achievements</span>
+                        <div className="flex items-center mb-1">
+                          <Target className="w-3 h-3 text-gray-600 mr-2" />
+                          <span className="font-semibold text-gray-800 text-xs">Key Achievements</span>
                         </div>
-                        <div className="pl-6 space-y-1">
+                        <div className="pl-5 space-y-1">
                           {member.achievements.map((achievement, index) => (
-                            <div key={index} className="text-gray-600 text-sm flex items-center">
-                              <div className="w-1 h-1 bg-sky-600 rounded-full mr-2"></div>
+                            <div key={index} className="text-gray-600 text-xs flex items-center">
+                              <div className="w-1 h-1 bg-sky-600 rounded-full mr-1"></div>
                               {achievement}
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      <div className="flex space-x-4 pt-2">
+                      <div className="flex space-x-3 pt-1">
                         <a 
                           href={`mailto:${member.email}`}
-                          className="flex items-center text-emerald-600 hover:text-emerald-700 transition-colors duration-200"
+                          className="flex items-center text-emerald-600 hover:text-emerald-700 transition-colors duration-200 text-xs"
                         >
-                          <Mail className="w-4 h-4 mr-1" />
-                          <span className="text-sm">Email</span>
+                          <Mail className="w-3 h-3 mr-1" />
+                          <span>Email</span>
                         </a>
                         <a 
                           href={`tel:${member.phone}`}
-                          className="flex items-center text-sky-600 hover:text-sky-700 transition-colors duration-200"
+                          className="flex items-center text-sky-600 hover:text-sky-700 transition-colors duration-200 text-xs"
                         >
-                          <Phone className="w-4 h-4 mr-1" />
-                          <span className="text-sm">Call</span>
+                          <Phone className="w-3 h-3 mr-1" />
+                          <span>Call</span>
                         </a>
                       </div>
                     </div>
@@ -323,68 +323,68 @@ const TeamSection = () => {
         </div>
 
         {/* Team Stats */}
-        <div className="mt-16 bg-gradient-to-r from-emerald-600 to-sky-600 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-8">
+        <div className="mt-12 bg-gradient-to-r from-emerald-600 to-sky-600 rounded-xl p-6 text-center">
+          <h2 className="text-xl font-bold text-white mb-6">
             Our Team by the Numbers
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-emerald-100">Team Members</div>
+              <div className="text-2xl font-bold text-white mb-1">50+</div>
+              <div className="text-emerald-100 text-xs">Team Members</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">200+</div>
-              <div className="text-emerald-100">Years Combined Experience</div>
+              <div className="text-2xl font-bold text-white mb-1">200+</div>
+              <div className="text-emerald-100 text-xs">Years Combined Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">25+</div>
-              <div className="text-emerald-100">Certified Specialists</div>
+              <div className="text-2xl font-bold text-white mb-1">25+</div>
+              <div className="text-emerald-100 text-xs">Certified Specialists</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">15</div>
-              <div className="text-emerald-100">Advanced Degrees</div>
+              <div className="text-2xl font-bold text-white mb-1">15</div>
+              <div className="text-emerald-100 text-xs">Advanced Degrees</div>
             </div>
           </div>
         </div>
 
         {/* Join Our Team CTA */}
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-100">
+        <div className="mt-12 bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Users className="w-8 h-8 text-emerald-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-800">Join Our Growing Team</h2>
+            <div className="flex items-center justify-center mb-4">
+              <Users className="w-6 h-6 text-emerald-600 mr-2" />
+              <h2 className="text-xl font-bold text-gray-800">Join Our Growing Team</h2>
             </div>
             
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-gray-600 max-w-2xl mx-auto mb-6 text-sm">
               We're always looking for passionate professionals who share our commitment 
               to providing excellent water solutions and serving South African communities.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center p-4 bg-emerald-50 rounded-lg">
-                <GraduationCap className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
-                <h4 className="font-semibold text-gray-800 mb-2">Continuous Learning</h4>
-                <p className="text-sm text-gray-600">Professional development and training opportunities</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="text-center p-3 bg-emerald-50 rounded-md">
+                <GraduationCap className="w-6 h-6 text-emerald-600 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-800 mb-1 text-sm">Continuous Learning</h4>
+                <p className="text-xs text-gray-600">Professional development and training opportunities</p>
               </div>
               
-              <div className="text-center p-4 bg-sky-50 rounded-lg">
-                <Award className="w-8 h-8 text-sky-600 mx-auto mb-3" />
-                <h4 className="font-semibold text-gray-800 mb-2">Career Growth</h4>
-                <p className="text-sm text-gray-600">Clear advancement paths and leadership opportunities</p>
+              <div className="text-center p-3 bg-sky-50 rounded-md">
+                <Award className="w-6 h-6 text-sky-600 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-800 mb-1 text-sm">Career Growth</h4>
+                <p className="text-xs text-gray-600">Clear advancement paths and leadership opportunities</p>
               </div>
               
-              <div className="text-center p-4 bg-amber-50 rounded-lg">
-                <Heart className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-                <h4 className="font-semibold text-gray-800 mb-2">Meaningful Impact</h4>
-                <p className="text-sm text-gray-600">Work that directly improves communities and lives</p>
+              <div className="text-center p-3 bg-amber-50 rounded-md">
+                <Heart className="w-6 h-6 text-amber-600 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-800 mb-1 text-sm">Meaningful Impact</h4>
+                <p className="text-xs text-gray-600">Work that directly improves communities and lives</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200 text-sm shadow-md">
                 View Open Positions
               </button>
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-md transition-colors duration-200 text-sm">
                 Submit Your CV
               </button>
             </div>

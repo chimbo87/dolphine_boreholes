@@ -86,44 +86,44 @@ const StatisticsCounter = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-3">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-3">
             Proven Track Record
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 max-w-xl mx-auto">
             With decades of experience in borehole drilling and water resource management, 
             we deliver results you can trust.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
               <div 
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-opacity-10 mb-6 ${stat.color.replace('text-', 'bg-')}`}>
-                  <IconComponent className={`w-8 h-8 ${stat.color}`} />
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-opacity-10 mb-4 ${stat.color.replace('text-', 'bg-')}`}>
+                  <IconComponent className={`w-6 h-6 ${stat.color}`} />
                 </div>
                 
-                <div className="mb-4">
-                  <span className="text-5xl font-bold text-gray-800">
+                <div className="mb-3">
+                  <span className="text-4xl font-bold text-gray-800">
                     {stat.value}
                   </span>
-                  <span className="text-3xl font-bold text-gray-600">
+                  <span className="text-2xl font-bold text-gray-600">
                     {stat.suffix}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {stat.label}
                 </h3>
                 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm">
                   {stat.description}
                 </p>
               </div>

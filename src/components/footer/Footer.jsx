@@ -51,33 +51,33 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto px-3 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="bg-emerald-600 rounded-lg p-2 mr-3">
-                <Droplets className="w-8 h-8 text-white" />
+            <div className="flex items-center mb-4">
+              <div className="bg-emerald-600 rounded-md p-1.5 mr-2">
+                <Droplets className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">BoreholePro</h3>
-                <p className="text-emerald-400 text-sm">Water Solutions Expert</p>
+                <h3 className="text-lg font-bold">BoreholePro</h3>
+                <p className="text-emerald-400 text-xs">Water Solutions Expert</p>
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed text-sm">
               South Africa's trusted partner for reliable water access. With over 25 years 
               of experience, we deliver sustainable borehole solutions that transform communities 
               and businesses.
             </p>
 
-            <div className="space-y-3">
+            <div className="space-y-2">
               {certifications.map((cert, index) => {
                 const IconComponent = cert.icon;
                 return (
-                  <div key={index} className="flex items-center text-sm text-gray-300">
-                    <IconComponent className="w-4 h-4 text-emerald-400 mr-2" />
+                  <div key={index} className="flex items-center text-xs text-gray-300">
+                    <IconComponent className="w-3.5 h-3.5 text-emerald-400 mr-1.5" />
                     {cert.name}
                   </div>
                 );
@@ -87,15 +87,15 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a 
                     href={link.href}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-200 flex items-center group text-sm"
                   >
-                    <ChevronRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-200" />
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 transform group-hover:translate-x-1 transition-transform duration-200" />
                     {link.name}
                   </a>
                 </li>
@@ -105,15 +105,15 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
                   <a 
                     href={service.href}
-                    className="text-gray-300 hover:text-sky-400 transition-colors duration-200 flex items-center group"
+                    className="text-gray-300 hover:text-sky-400 transition-colors duration-200 flex items-center group text-sm"
                   >
-                    <ChevronRight className="w-4 h-4 mr-2 transform group-hover:translate-x-1 transition-transform duration-200" />
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 transform group-hover:translate-x-1 transition-transform duration-200" />
                     {service.name}
                   </a>
                 </li>
@@ -123,49 +123,49 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Information</h4>
+            <h4 className="text-base font-semibold mb-4">Contact Information</h4>
             
-            <div className="space-y-4 mb-6">
+            <div className="space-y-3 mb-4">
               <div className="flex items-start">
-                <Phone className="w-5 h-5 text-emerald-400 mr-3 mt-0.5" />
+                <Phone className="w-4 h-4 text-emerald-400 mr-2 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 font-medium">+27 11 123 4567</p>
-                  <p className="text-gray-400 text-sm">24/7 Emergency Line</p>
+                  <p className="text-gray-300 font-medium text-sm">+27 11 123 4567</p>
+                  <p className="text-gray-400 text-xs">24/7 Emergency Line</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <Mail className="w-5 h-5 text-sky-400 mr-3 mt-0.5" />
+                <Mail className="w-4 h-4 text-sky-400 mr-2 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 font-medium">info@boreholepro.co.za</p>
-                  <p className="text-gray-400 text-sm">General Inquiries</p>
+                  <p className="text-gray-300 font-medium text-sm">info@boreholepro.co.za</p>
+                  <p className="text-gray-400 text-xs">General Inquiries</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <MapPin className="w-5 h-5 text-amber-400 mr-3 mt-0.5" />
+                <MapPin className="w-4 h-4 text-amber-400 mr-2 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 font-medium">123 Drilling Street</p>
-                  <p className="text-gray-300">Johannesburg, Gauteng 2001</p>
+                  <p className="text-gray-300 font-medium text-sm">123 Drilling Street</p>
+                  <p className="text-gray-300 text-sm">Johannesburg, Gauteng 2001</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <Clock className="w-5 h-5 text-emerald-400 mr-3 mt-0.5" />
+                <Clock className="w-4 h-4 text-emerald-400 mr-2 mt-0.5" />
                 <div>
-                  <p className="text-gray-300 font-medium">Mon - Fri: 7:00 AM - 6:00 PM</p>
-                  <p className="text-gray-300">Sat: 8:00 AM - 4:00 PM</p>
-                  <p className="text-gray-400 text-sm">Emergency services 24/7</p>
+                  <p className="text-gray-300 font-medium text-sm">Mon - Fri: 7:00 AM - 6:00 PM</p>
+                  <p className="text-gray-300 text-sm">Sat: 8:00 AM - 4:00 PM</p>
+                  <p className="text-gray-400 text-xs">Emergency services 24/7</p>
                 </div>
               </div>
             </div>
 
             {/* Service Areas */}
-            <div className="mb-6">
-              <h5 className="font-semibold text-gray-300 mb-3">Service Areas:</h5>
-              <div className="grid grid-cols-2 gap-2">
+            <div className="mb-4">
+              <h5 className="font-semibold text-gray-300 text-sm mb-2">Service Areas:</h5>
+              <div className="grid grid-cols-2 gap-1.5">
                 {serviceAreas.map((area, index) => (
-                  <div key={index} className="text-sm text-gray-400">
+                  <div key={index} className="text-xs text-gray-400">
                     • {area}
                   </div>
                 ))}
@@ -174,8 +174,8 @@ const Footer = () => {
 
             {/* Social Media */}
             <div>
-              <h5 className="font-semibold text-gray-300 mb-3">Follow Us:</h5>
-              <div className="flex space-x-3">
+              <h5 className="font-semibold text-gray-300 text-sm mb-2">Follow Us:</h5>
+              <div className="flex space-x-2">
                 {[
                   { icon: Facebook, color: 'hover:text-blue-400' },
                   { icon: Twitter, color: 'hover:text-sky-400' },
@@ -189,7 +189,7 @@ const Footer = () => {
                       href="#"
                       className={`text-gray-400 ${social.color} transition-colors duration-200 hover:scale-110 transform`}
                     >
-                      <IconComponent className="w-6 h-6" />
+                      <IconComponent className="w-5 h-5" />
                     </a>
                   );
                 })}
@@ -200,14 +200,14 @@ const Footer = () => {
       </div>
 
       {/* Emergency Contact Banner */}
-      <div className="bg-emerald-600 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-emerald-600 py-3">
+        <div className="max-w-6xl mx-auto px-3">
           <div className="flex flex-col sm:flex-row items-center justify-between">
-            <div className="flex items-center mb-2 sm:mb-0">
-              <Phone className="w-5 h-5 text-emerald-200 mr-2" />
-              <span className="text-white font-semibold">Emergency Water Services Available 24/7</span>
+            <div className="flex items-center mb-1.5 sm:mb-0">
+              <Phone className="w-4 h-4 text-emerald-200 mr-1.5" />
+              <span className="text-white font-semibold text-sm">Emergency Water Services Available 24/7</span>
             </div>
-            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-2 px-6 rounded-lg transition-colors duration-200">
+            <button className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-1.5 px-4 rounded-md transition-colors duration-200 text-sm">
               Call Now: +27 11 123 4567
             </button>
           </div>
@@ -215,14 +215,14 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="bg-gray-900 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gray-900 py-4">
+        <div className="max-w-6xl mx-auto px-3">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">
+            <div className="flex flex-col md:flex-row items-center space-y-1.5 md:space-y-0 md:space-x-4 mb-3 md:mb-0">
+              <p className="text-gray-400 text-xs">
                 © {currentYear} BoreholePro. All rights reserved.
               </p>
-              <div className="flex space-x-4 text-sm">
+              <div className="flex space-x-3 text-xs">
                 <a href="#privacy" className="text-gray-400 hover:text-emerald-400 transition-colors duration-200">
                   Privacy Policy
                 </a>
@@ -235,11 +235,11 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-400 text-sm">Powered by sustainable drilling practices</span>
+            <div className="flex items-center space-x-3">
+              <span className="text-gray-400 text-xs">Powered by sustainable drilling practices</span>
               <div className="flex items-center">
-                <Droplets className="w-4 h-4 text-emerald-400 mr-1" />
-                <span className="text-emerald-400 text-sm font-medium">Clean Water for All</span>
+                <Droplets className="w-3.5 h-3.5 text-emerald-400 mr-1" />
+                <span className="text-emerald-400 text-xs font-medium">Clean Water for All</span>
               </div>
             </div>
           </div>
