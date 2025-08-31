@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Calendar, Users, Award, TrendingUp, Droplets, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
-
+import project01 from "../../../../assets/images/projectphoto01.jpg"
 const CompanyStory = () => {
   const [expandedMilestone, setExpandedMilestone] = useState(null);
 
   const milestones = [
     {
-      year: '1999',
+      year: '2009',
       title: 'The Beginning',
       subtitle: 'Founded with a Vision',
       description: 'Started by water engineer Johan van Rooyen after witnessing rural communities struggling with water access during the drought of 1998.',
@@ -15,7 +15,7 @@ const CompanyStory = () => {
       color: 'emerald'
     },
     {
-      year: '2005',
+      year: '2010',
       title: 'Major Expansion',
       subtitle: 'Growing Our Reach',
       description: 'Expanded operations to serve four provinces and completed our 500th successful borehole project.',
@@ -118,20 +118,20 @@ const CompanyStory = () => {
               </p>
               <div className="flex items-center text-emerald-600 font-medium text-sm">
                 <Calendar className="w-4 h-4 mr-2" />
-                Founded: March 15, 1999
+                Founded: March 15, 2009
               </div>
             </div>
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" 
+                src={project01} 
                 alt="Borehole drilling operation"
                 className="rounded-lg shadow-md w-full h-52 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
               <div className="absolute bottom-2 left-3 text-white text-xs">
                 <p className="font-semibold">Our first drilling project</p>
-                <p className="opacity-90">Mpumalanga, 1999</p>
+                <p className="opacity-90">Harare, 2009</p>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ const CompanyStory = () => {
         {/* Timeline */}
         <div className="mb-10">
           <h2 className="text-xl font-bold text-gray-800 text-center mb-8">
-            25 Years of Excellence
+            10 Years of Excellence
           </h2>
           
           <div className="relative">
@@ -155,7 +155,7 @@ const CompanyStory = () => {
                 return (
                   <div key={index} className="relative">
                     {/* Timeline Dot */}
-                    <div className={`absolute left-3 w-6 h-6 ${colors.accent} rounded-full flex items-center justify-center shadow-md hidden md:flex transform -translate-x-1/2`}>
+                    <div className={`absolute left-6 w-5 h-5 ${colors.accent} rounded-full flex items-center justify-center shadow-md hidden md:flex transform -translate-x-1/2`}>
                       <IconComponent className="w-3 h-3 text-white" />
                     </div>
                     
@@ -215,15 +215,15 @@ const CompanyStory = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <div className="text-xl font-bold text-emerald-400 mb-1">25+</div>
+              <div className="text-xl font-bold text-emerald-400 mb-1">10+</div>
               <div className="text-gray-300 text-xs">Years Experience</div>
             </div>
             <div>
-              <div className="text-xl font-bold text-sky-400 mb-1">1,250+</div>
+              <div className="text-xl font-bold text-sky-400 mb-1">500+</div>
               <div className="text-gray-300 text-xs">Projects Completed</div>
             </div>
             <div>
-              <div className="text-xl font-bold text-amber-400 mb-1">98%</div>
+              <div className="text-xl font-bold text-amber-400 mb-1">95%</div>
               <div className="text-gray-300 text-xs">Success Rate</div>
             </div>
             <div>

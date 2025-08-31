@@ -33,7 +33,7 @@ const AboutHero = () => {
   ];
 
   const stats = [
-    { number: '15+', label: 'Years Experience', icon: <Calendar className="w-5 h-5" /> },
+    { number: '10+', label: 'Years Experience', icon: <Calendar className="w-5 h-5" /> },
     { number: '500+', label: 'Projects Done', icon: <Award className="w-5 h-5" /> },
     { number: '50+', label: 'Team Members', icon: <Users className="w-5 h-5" /> },
     { number: '5', label: 'Provinces Served', icon: <MapPin className="w-5 h-5" /> }
@@ -54,7 +54,7 @@ const AboutHero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium">
               <CheckCircle className="w-3 h-3" />
-              Established 2009 • Johannesburg, SA
+              Established 2009 • Harare, Zimbabwe
             </div>
 
             {/* Heading */}
@@ -68,7 +68,7 @@ const AboutHero = () => {
               </h1>
 
               <p className="text-sm md:text-base text-emerald-100 leading-relaxed max-w-xl">
-                We’re South Africa’s leading borehole specialists, blending traditional expertise 
+                We’re Zimbabwe’s leading borehole specialists, blending traditional expertise 
                 with modern technology to deliver lasting water solutions.
               </p>
             </div>
@@ -77,7 +77,7 @@ const AboutHero = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
               <h3 className="text-base font-semibold mb-2 text-emerald-200">Our Mission</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                To provide reliable, sustainable water access to communities across South Africa 
+                To provide reliable, sustainable water access to communities across Zimbabwe 
                 through expert craftsmanship and innovation.
               </p>
             </div>

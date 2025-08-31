@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Filter, MapPin, Calendar, Wrench, Droplets, Search, X } from 'lucide-react';
+import project01 from "../.././assets/images/projectphoto01.jpg"
+import project02 from "../.././assets/images/projectphoto02.jpg"
+import project03 from "../.././assets/images/photo01.jpg"
+import project04 from "../.././assets/images/photo02.jpg"
+import project05 from "../.././assets/images/school-project.jpg"
+import project06 from "../.././assets/images/community-project.jpg"
+import project07 from "../.././assets/images/farm-project.jpg"
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -13,8 +20,8 @@ const Gallery = () => {
       id: 1,
       title: "Commercial Borehole - Mining Complex",
       category: "commercial",
-      location: "gauteng",
-      image: "https://picsum.photos/id/1056/400/300",
+      location: "harare",
+      image: project01,
       depth: "150m",
       date: "March 2024",
       description: "High-capacity water supply for mining operations"
@@ -23,8 +30,8 @@ const Gallery = () => {
       id: 2,
       title: "Residential Water Well",
       category: "residential", 
-      location: "western-cape",
-      image: "https://picsum.photos/id/1060/400/500",
+      location: "mazowe",
+      image: project02,
       depth: "80m",
       date: "February 2024",
       description: "Sustainable water solution for family home"
@@ -33,8 +40,8 @@ const Gallery = () => {
       id: 3,
       title: "Agricultural Irrigation System",
       category: "agricultural",
-      location: "free-state",
-      image: "https://picsum.photos/id/1073/400/350",
+      location: "mazowe",
+      image: project03,
       depth: "120m", 
       date: "January 2024",
       description: "Large-scale irrigation for crop farming"
@@ -43,8 +50,8 @@ const Gallery = () => {
       id: 4,
       title: "School Water Supply Project",
       category: "institutional",
-      location: "limpopo",
-      image: "https://picsum.photos/id/1081/400/450",
+      location: "rusape",
+      image: project04,
       depth: "95m",
       date: "December 2023",
       description: "Clean water access for rural school"
@@ -53,8 +60,8 @@ const Gallery = () => {
       id: 5,
       title: "Industrial Water Supply",
       category: "commercial",
-      location: "kwazulu-natal",
-      image: "https://picsum.photos/id/1083/400/380",
+      location: "harare",
+      image: project05,
       depth: "200m",
       date: "November 2023", 
       description: "Industrial-grade water supply system"
@@ -63,8 +70,8 @@ const Gallery = () => {
       id: 6,
       title: "Community Borehole",
       category: "community",
-      location: "northern-cape",
-      image: "https://picsum.photos/id/1084/400/320",
+      location: "mazowe",
+      image: project06,
       depth: "110m",
       date: "October 2023",
       description: "Community water access point"
@@ -82,12 +89,12 @@ const Gallery = () => {
 
   const locations = [
     { value: 'all', label: 'All Locations' },
-    { value: 'gauteng', label: 'Gauteng' },
-    { value: 'western-cape', label: 'Western Cape' },
-    { value: 'kwazulu-natal', label: 'KwaZulu-Natal' },
-    { value: 'free-state', label: 'Free State' },
-    { value: 'limpopo', label: 'Limpopo' },
-    { value: 'northern-cape', label: 'Northern Cape' }
+    { value: 'harare', label: 'Harare' },
+    { value: 'mazowe', label: 'Mazowe' },
+    { value: 'rusape', label: 'Rusape' },
+    { value: 'marondera', label: 'Marondera' },
+    { value: 'mutare', label: 'Mutare' },
+    { value: 'kadoma', label: 'Kadoma' }
   ];
 
   const filteredProjects = projects.filter(project => {

@@ -78,7 +78,7 @@ const ServiceHero = () => {
                 <div className="text-emerald-200 text-xs">{heroSlides[currentSlide].stats.label}</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-xl font-bold text-white">15+</div>
+                <div className="text-xl font-bold text-white">10+</div>
                 <div className="text-emerald-200 text-xs">Years Experience</div>
               </div>
               <div className="text-center lg:text-left">
@@ -103,15 +103,15 @@ const ServiceHero = () => {
             <div className="flex flex-col sm:flex-row gap-3 text-emerald-100 text-xs">
               <div className="flex items-center gap-1">
                 <Phone className="w-3 h-3" />
-                <span>+27 11 123 4567</span>
+                <span>+263 77 295 1768</span>
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="w-3 h-3" />
-                <span>info@boreholeexperts.co.za</span>
+                <span>info@dolphines.co.zw</span>
               </div>
               <div className="flex items-center gap-1">
                 <MapPin className="w-3 h-3" />
-                <span>Johannesburg, SA</span>
+                <span>Harare, Zimbabwe</span>
               </div>
             </div>
           </div>

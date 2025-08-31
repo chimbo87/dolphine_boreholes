@@ -42,10 +42,10 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    'Gauteng Province',
-    'Mpumalanga Province', 
-    'Limpopo Province',
-    'North West Province'
+    'Harare Province',
+    'Manicaland Province', 
+    'Mashonaland Province',
+    'Midlands Province'
   ];
 
   return (

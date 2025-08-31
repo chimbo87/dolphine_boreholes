@@ -10,6 +10,8 @@ import {
   Zap,
   CheckCircle
 } from 'lucide-react';
+import project01 from "../../../../assets/images/projectphoto01.jpg"
+import project02 from "../../../../assets/images/projectphoto02.jpg"
 
 const MissionVision = () => {
   const values = [
@@ -124,7 +126,7 @@ const MissionVision = () => {
             
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" 
+                src={project01} 
                 alt="Community water access"
                 className="rounded-lg shadow-md w-full h-64 object-cover"
               />
@@ -137,7 +139,7 @@ const MissionVision = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1569163139394-de4e5f43e4e3?w=600&h=400&fit=crop" 
+                src={project02} 
                 alt="Sustainable water future"
                 className="rounded-lg shadow-md w-full h-64 object-cover"
               />

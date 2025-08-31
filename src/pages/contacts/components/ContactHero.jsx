@@ -53,7 +53,7 @@ const ContactHero = () => {
                   href="tel:+27111234567" 
                   className="text-amber-300 font-bold text-sm hover:text-amber-200 transition-colors"
                 >
-                  +27 11 123 4567
+                 +263 77 295 1768
                 </a>
               </div>
             </div>
@@ -70,7 +70,7 @@ const ContactHero = () => {
                   href="mailto:info@boreholepro.co.za" 
                   className="text-amber-300 font-bold text-sm hover:text-amber-200 transition-colors"
                 >
-                  info@boreholepro.co.za
+                  info@dolphine.co.zw
                 </a>
               </div>
             </div>
@@ -82,10 +82,10 @@ const ContactHero = () => {
                   <MapPin className="text-white" size={20} />
                 </div>
                 <h3 className="text-base font-semibold text-white mb-1">Visit Us</h3>
-                <p className="text-emerald-100 text-xs mb-1">Located in Johannesburg</p>
+                <p className="text-emerald-100 text-xs mb-1">Located in Harare</p>
                 <p className="text-amber-300 font-bold text-xs">
                   123 Industrial Avenue<br />
-                  Johannesburg, 2000
+                  Hararre, 2000
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ const ContactHero = () => {
               className="inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-sm"
             >
               <Phone size={16} />
-              <span>Emergency Hotline: +27 82 911 HELP</span>
+              <span>Emergency Hotline: +263 77 295 1768 HELP</span>
             </a>
           </div>
 

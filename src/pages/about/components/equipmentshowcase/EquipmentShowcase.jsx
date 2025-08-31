@@ -18,7 +18,8 @@ import {
   Eye,
   Award
 } from 'lucide-react';
-
+import project01 from "../../../../assets/images/photo01.jpg"
+import project02 from "../../../../assets/images/photo02.jpg"
 const EquipmentShowcase = () => {
   const [currentEquipment, setCurrentEquipment] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -29,7 +30,7 @@ const EquipmentShowcase = () => {
       name: 'Atlas Copco T4BH',
       category: 'drilling-rigs',
       type: 'Heavy-Duty Drilling Rig',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=500&fit=crop',
+      image: project02,
       depth: '300m',
       diameter: '150-400mm',
       power: '350HP',
@@ -56,7 +57,7 @@ const EquipmentShowcase = () => {
       name: 'Geological Survey Pro',
       category: 'survey-equipment',
       type: 'Ground Penetrating Radar System',
-      image: 'https://images.unsplash.com/photo-1558618047-3f07b6ec8c89?w=800&h=500&fit=crop',
+      image: project01,
       depth: '200m',
       accuracy: '98%',
       coverage: '10km²/day',
@@ -83,7 +84,7 @@ const EquipmentShowcase = () => {
       name: 'HydroMax Pump Station',
       category: 'pump-systems',
       type: 'Solar-Powered Pump System',
-      image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=500&fit=crop',
+      image: project02,
       capacity: '50,000L/day',
       power: 'Solar + Backup',
       efficiency: '95%',
@@ -110,7 +111,7 @@ const EquipmentShowcase = () => {
       name: 'DrillMaster Compact',
       category: 'drilling-rigs',
       type: 'Mobile Drilling Unit',
-      image: 'https://images.unsplash.com/photo-1571978269968-bdbcc8406a6a?w=800&h=500&fit=crop',
+      image: project01,
       depth: '150m',
       diameter: '100-250mm',
       power: '180HP',
@@ -137,7 +138,7 @@ const EquipmentShowcase = () => {
       name: 'AquaTest Laboratory Kit',
       category: 'testing-equipment',
       type: 'Water Quality Analysis System',
-      image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop',
+      image: project02,
       tests: '25+ Parameters',
       accuracy: '99.5%',
       speed: 'Real-time',
@@ -164,7 +165,7 @@ const EquipmentShowcase = () => {
       name: 'TechFlow Monitor',
       category: 'monitoring-systems',
       type: 'IoT Water Monitoring System',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+      image: project01,
       monitoring: '24/7',
       connectivity: '4G/Satellite',
       battery: '5 Years',
