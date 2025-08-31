@@ -158,7 +158,7 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => {
-                  handleNavigation('/');
+                  navigate('/');
                   setIsOpen(false);
                 }}
                 className="text-gray-700 hover:text-emerald-600 font-medium text-left"
@@ -167,7 +167,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => {
-                  handleNavigation('/about');
+                  navigate('/about');
                   setIsOpen(false);
                 }}
                 className="text-gray-700 hover:text-emerald-600 font-medium text-left"
@@ -176,7 +176,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => {
-                  handleNavigation('/services');
+                  navigate('/services');
                   setIsOpen(false);
                 }}
                 className="text-gray-700 hover:text-emerald-600 font-medium text-left"
@@ -185,7 +185,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => {
-                  handleNavigation('/gallery');
+                  navigate('/gallery');
                   setIsOpen(false);
                 }}
                 className="text-gray-700 hover:text-emerald-600 font-medium text-left"
@@ -194,7 +194,7 @@ const Navbar = () => {
               </button>
               <button
                 onClick={() => {
-                  handleNavigation('/contact');
+                  navigate('/contact');
                   setIsOpen(false);
                 }}
                 className="text-gray-700 hover:text-emerald-600 font-medium text-left"
