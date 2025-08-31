@@ -41,12 +41,12 @@ const Navbar = () => {
       {/* Top Contact Bar */}
       <div className="bg-emerald-600 text-white py-1 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-xs md:text-sm">
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-1 justify-between md:justify-start items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone size={12} />
               <span>+27 11 123 4567</span>
             </div>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-1 ml-auto md:ml-0">
               <Mail size={12} />
               <span>info@boreholepro.co.za</span>
             </div>
